@@ -142,12 +142,22 @@ $scope.products =
 ```
 
 - In the controller, we used `products` to store an array containing two objects.<br>
-컨트롤러에서 두개의 객체를 가지고 있는 배열을 저장하기 위해 `products를 사용했다. 
+컨트롤러에서 두개의 객체를 가지고 있는 배열을 저장하기 위해 products를 사용했다. 
 
 - Then in the view, we added `<div ng-repeat="product in products">`. <br>
 Like `ng-app` and `ng-controller`, the `ng-repeat` is a directive. <br>
 It **loops** through an array and displays each element. <br>
 Here, the `ng-repeat` repeats all the HTML inside `<div class="col-md-6">` for each element in the `products` array.<br>
-view에서 `ng-repeat="product in products"`<br>
+view에서 `ng-repeat="product in products"` 추가.<br>
 `ng-repeat`도 디렉티브이다.<br>
 `products`배열 각 요소를 html안에서 repeat해준다. 
+
+
+### 8_directives
+
+- Directives bind behavior to HTML elements. <br>
+When the app runs, AngularJS walks through each HTML element looking for directives. <br>
+When it finds one, AngularJS triggers that behavior (like attaching a scope or looping through an array).<br><br>
+디렉티브는 behavior(동작?)을 html요소들로 묶어준다. <br>
+앵귤러가 각 html요소를 지나가면서 디렉티브를 찾는다. <br>
+하나를 찾으면 앵귤러는 behavior(동작?) 를 시작하게 한다. (스코프(범위)를 attaching하거나 배열을 통해 looping하게 하는 등)
