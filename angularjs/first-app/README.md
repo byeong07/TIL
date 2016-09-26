@@ -139,7 +139,6 @@ $scope.products =
 ```
 
 - In the controller, we used `products` to store an array containing two objects.<br><br>
-
 컨트롤러에서 두개의 객체를 가지고 있는 배열을 저장하기 위해 products를 사용했다. 
 
 - Then in the view, we added `<div ng-repeat="product in products">`. <br>
@@ -158,7 +157,8 @@ When the app runs, AngularJS walks through each HTML element looking for directi
 When it finds one, AngularJS triggers that behavior (like attaching a scope or looping through an array).<br><br>
 디렉티브는 behavior(동작?)을 html요소들로 묶어준다. <br>
 앵귤러가 각 html요소를 지나가면서 디렉티브를 찾는다. <br>
-하나를 찾으면 앵귤러는 behavior(동작?) 를 시작하게 한다. (스코프(범위)를 attaching하거나 배열을 통해 looping하게 하는 등)
+하나를 찾으면 앵귤러는 behavior(동작?) 를 시작하게 한다. <br>
+(스코프(범위)를 attaching하거나 배열을 통해 looping하게 하는 등)
 
 ### 9,10_ng-click
 
@@ -205,13 +205,14 @@ plusOne()함수가 view와 상호작용하는게 아니다. 이 함수는 컨트
 1. A user visits the AngularJS app.<br>
 	: 사용자가 앵귤러 앱에 들어왔다. 
 
-1. The view presents the app's data through the use of expressions, filters, and directives. Directives bind new behavior HTML elements.<br>
+1. The view presents the app's data through the use of expressions, filters, and directives. <br>
+Directives bind new behavior HTML elements.<br>
 	: view는 expressions(표현식) 사용을 통해 앱의 데이터를 보여준다. 
 
 1. A user clicks an element in the view. If the element has a directive, AngularJS runs the function.<br>
 	: 사용자가 view의 요소를 클릭한다. 만약 그 요소에 디렉티브가 있다면 앵귤러는 함수를 작동시킨다. 
 
-1. The function in the controller updates the state of the data.
+1. The function in the controller updates the state of the data.<br>
 	: 그 함수는 컨트롤러 내에 있고, 데이터 상황을 업데이트 시킨다. 
 
 1. The view automatically changes and displays the updated data. The page doesn't need to reload at any point.<br>
