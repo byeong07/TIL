@@ -8,19 +8,19 @@
 
 #### 1, 2_Hello AngularJS
 
-##### js/app.js 파일 
+##### 1) js/app.js 파일 
 
 ```
 var app = angular.module("myApp", []); 
 ```
-created a new module name myApp. <br>
+- created a new module name myApp. <br>
 새 모듈(이름이 myApp인)을 만든다. <br>
 
-A module contains the different components of an AngularJS app.<br>
+- **A module contains the different components of an AngularJS app.**<br>
 모듈은 앵귤러앱의 서로다른 구성요소를 담고있다. 
 
 
-##### index.html 파일
+##### 2) index.html 파일
 
 ```
 <body ng-app="myApp>
@@ -31,11 +31,39 @@ A module contains the different components of an AngularJS app.<br>
 <!-- Controllers -->
 <script src="js/controllers/MainController.js"></script>
 ```
-The `ng-app` is called a *directive*. <br>
+- The `ng-app` is called a *directive*. <br>
 `ng-app`은 디렉티브(지시자)라 부른다.  <br>
 
-It tells AngularJS that the `myApp` module will live within the `<body>` element, termed the application's *scope*. <br>
+- It tells AngularJS that the `myApp` module will live within the `<body>` element, termed the application's *scope*. <br>
 위 코드의 경우 `myApp` 모듈은 `<body>`요소내에서 유지되고, 애플리케이션의 스코프(범위)이다. <br>
 
-In other words, we used the `ng-app` directive to define the application scope. <br>
+- In other words, **we used the `ng-app` directive to define the application scope.** <br>
 다시 말해, `ng-app` 디렉티브는 애플리케이션 스코프를 정의하기 위해 사용한다. 
+
+##### 3) js/controllers/MainController.js 파일 
+
+```
+app.controller('MainController', ['$scope', function($scope) {
+  $scope.title = 'Top Sellers in Books';
+}]);
+```
+
+- we created a new *controller*. named `MainController`. <br>
+**A controller manages the app's data**. <br>
+Here we use the property title to store a string, and attach it to `$scope`.<br>
+이름이 MainController인 컨트롤러를 만들었다. <br>
+컨트롤러는 앱의 데이터를 관리한다. <br>
+여기서는 스트링(문자)를 저장하는 프로퍼티명이 title을 사용하고, `$scope`에 첨부한다. 
+
+##### 4) index.html 파일
+
+```
+<div class="main" ng-controller="MainController">
+  <div class="container">
+    <h1> {{ title }} </h1> // expression
+```
+
+- Like `ng-app`, `ng-controller` is a *directive* that **defines the controller scope**. <br>
+This means that properties attached to `$scope` in `MainController` become available to use within `<div class="main">`.<br>
+ng-controller도 컨트롤러 스코프를 정의하는 디렉티브이다.  <br>
+이는 `MainController`가 `<div class="main">` 내에서 유효하다는 것을 말한다. 프로퍼티는 `$scope`에 첨부된다. 
