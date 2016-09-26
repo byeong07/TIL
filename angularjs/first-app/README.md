@@ -53,7 +53,7 @@ app.controller('MainController', ['$scope', function($scope) {
 Here we use the property title to store a string, and attach it to `$scope`.<br>
 이름이 MainController인 컨트롤러를 만들었다. <br>
 컨트롤러는 앱의 데이터를 관리한다. <br>
-여기서는 스트링(문자)를 저장하는 프로퍼티명이 title을 사용하고, `$scope`에 첨부한다. 
+여기서는 스트링(문자)를 저장하는 프로퍼티명 title을 사용하고, `$scope`에 첨부한다. 
 
 ##### 4) index.html 파일
 
@@ -67,3 +67,12 @@ Here we use the property title to store a string, and attach it to `$scope`.<br>
 This means that properties attached to `$scope` in `MainController` become available to use within `<div class="main">`.<br>
 ng-controller도 컨트롤러 스코프를 정의하는 디렉티브이다.  <br>
 이는 `MainController`가 `<div class="main">` 내에서 유효하다는 것을 말한다. 프로퍼티는 `$scope`에 첨부된다. 
+
+- Inside `<div class="main">` we accessed `$scope.title` using `{{ title }}`. <br>
+This is called an *expression*. **Expressions are used to display values on the page**. <br>
+`{{ title }}`을 expression(표현식)이라 부른다. 표현식은 페이지에 값을 나타내기 위해 사용된다. 
+
+- Both the controller `MainController` and the view `index.html` have access to `$scope`. <br>
+This means we can use `$scope` to communicate between the controller and the view.
+컨트롤러(MainController)와 뷰(index.html)는 둘 다 `$scope`로 접근된다. <br>
+이것은 컨트롤러와 뷰간 커뮤니케이트할 때 `$scope`를 사용할 수 있다는 것을 의미한다. 
