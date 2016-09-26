@@ -222,7 +222,7 @@ plusOne()함수가 view와 상호작용하는게 아니다. 이 함수는 컨트
 
 1. The function in the controller updates the state of the data.
 	: 그 함수는 컨트롤러 내에 있고, 데이터 상황을 업데이트 시킨다. 
-	
-1.The view automatically changes and displays the updated data. The page doesn't need to reload at any point.
+
+1. The view automatically changes and displays the updated data. The page doesn't need to reload at any point.
 	: 뷰는 자동적으로 변하고, 업데이트된 데이터를 보여준다. 그 페이지는 리로드될 필요가 없다. 
 
