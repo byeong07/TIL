@@ -167,3 +167,62 @@ When it finds one, AngularJS triggers that behavior (like attaching a scope or l
 디렉티브는 behavior(동작?)을 html요소들로 묶어준다. <br>
 앵귤러가 각 html요소를 지나가면서 디렉티브를 찾는다. <br>
 하나를 찾으면 앵귤러는 behavior(동작?) 를 시작하게 한다. (스코프(범위)를 attaching하거나 배열을 통해 looping하게 하는 등)
+
+### 9,10_ng-click
+
+- So far we've made a static AngularJS app by adding properties in the controller and displaying them in the view. <br>
+AngularJS is a framework for building dynamic web apps, so let's start to make this app interactive.<br><br>
+
+지금까지 우리는 정적인 앵귤러앱을 만들었다. controller내에서 프로퍼티를 더하고 그것을 view에서 디스플레이하는..<br>
+앵귤러는 다이나믹한 웹 앱을 만들기 위한 프레임워크이다. 인터렉티브(상호작용)하는 앱을 만들어보자. 
+
+##### MainController.js 파일
+
+```
+$scope.products =
+    [
+      {
+        name: 'The Book of Trees',
+        price: 19,
+        pubdate: new Date('2014', '03', '08'),
+        cover: 'img/the-book-of-trees.jpg',
+        likes: 0
+      }, 
+......
+$scope.plusOne = function(index) {
+    $scope.products[index].likes += 1; }
+```
+
+##### index.html파일
+
+```
+<p class="likes" ng-click="plusOne($index)">+ {{ product.likes }}</p>
+```
+
+- 클릭하면 컨트롤러내의 plusOne함수 실행된다. <br> 
+plusOne함수는 클릭된 product의 index를 가져와서 like 프로퍼티를 + 1 시킨다. 
+
+- Notice that the plusOne() doesn't interact with the view at all; it just updates the controller.<br>
+Any change made to the controller shows up in the view. <br><br>
+
+plusOne()함수가 view와 상호작용하는게 아니다. 이 함수는 컨트롤러를 업데이트해준다. 변경되면 컨트롤러가 뷰에 나타나게 해준다. 
+
+
+### 11_Generalizations (총괄)
+
+
+1. A user visits the AngularJS app.
+	: 사용자가 앵귤러 앱에 들어왔다. 
+
+1. The view presents the app's data through the use of expressions, filters, and directives. Directives bind new behavior HTML elements.
+	: view는 expressions(표현식) 사용을 통해 앱의 데이터를 보여준다. 
+
+1. A user clicks an element in the view. If the element has a directive, AngularJS runs the function.
+	: 사용자가 view의 요소를 클릭한다. 만약 그 요소에 디렉티브가 있다면 앵귤러는 함수를 작동시킨다. 
+
+1. The function in the controller updates the state of the data.
+	: 그 함수는 컨트롤러 내에 있고, 데이터 상황을 업데이트 시킨다. 
+	
+1.The view automatically changes and displays the updated data. The page doesn't need to reload at any point.
+	: 뷰는 자동적으로 변하고, 업데이트된 데이터를 보여준다. 그 페이지는 리로드될 필요가 없다. 
+
