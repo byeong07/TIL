@@ -6,7 +6,7 @@
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/02_directives)
 - 중요! 해석이 틀릴 수 있으니 조심 ^^ 
 
-### 1_ directives 1
+### 1,2_ directives
 
 ##### index.html 코드 리펙토링 전 
 
@@ -55,7 +55,7 @@ app.directive('appInfo', function(){
 - we made a new *directive*. We used `app.directive` to create a new directive named `'appInfo'`. <br> 
 It returns an object with three options.<br><br>
 app.directive으로 이름이 appInfo인 새 디렉티브를 만들었다. <br>
-이는 다음 3 옵션을 가진 객체를 반환한다. 
+이는 다음 세 옵션을 가진 객체를 반환한다. 
 
 1. `restrict` specifies how the directive will be used in the view.<br> The `'E'` means it will be used as a new HTML element.<br><br>
 restrict는 어떻게 디렉티브가 view에서 사용될지 명시한다. <br>
@@ -67,7 +67,7 @@ scope는 info속성을 통해 이 디렉티브에서 정보를 통과하도록 �
 info안의 데이터는 templateURL에 주어진 템플릿에서 사용되기 위해 이용가능하게 된다.
 
 1. `templateUrl` specifies the HTML to use in order to display the data in `scope.info`. Here we use the HTML in `js/directives/appInfo.html`.<br><br>
-templateUrl은 scope.info의 데이터가 순서대로 보이도록 한다. <br>
+templateUrl은 scope.info의 데이터가 순서대로 사용되도록 한다. <br>
 
 
 ##### js/directives/appInfo.html
