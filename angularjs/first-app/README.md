@@ -1,12 +1,12 @@
 # AngularJS
 
-### first-app
+## first-app
 
 - [코드카데미](https://www.codecademy.com) Lesson 1. Your First App 공부 후 github에 정리하기
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/first-app)
 - 중요! 해석이 틀릴 수 있으니 조심 ^^ 제 영어는 7년전에 머물러있습니다.. ㅋㅋ 
 
-#### 1, 2_Hello AngularJS
+### 1, 2_Hello AngularJS
 
 ##### 1) js/app.js 파일 
 
@@ -73,6 +73,81 @@ This is called an *expression*. **Expressions are used to display values on the 
 `{{ title }}`을 expression(표현식)이라 부른다. 표현식은 페이지에 값을 나타내기 위해 사용된다. 
 
 - Both the controller `MainController` and the view `index.html` have access to `$scope`. <br>
-This means we can use `$scope` to communicate between the controller and the view.
+This means we can use `$scope` to communicate between the controller and the view.<br>
 컨트롤러(MainController)와 뷰(index.html)는 둘 다 `$scope`로 접근된다. <br>
 이것은 컨트롤러와 뷰간 커뮤니케이트할 때 `$scope`를 사용할 수 있다는 것을 의미한다. 
+
+
+### 3_workflow
+
+typical workflow when making an AngularJS app:
+
+1. Create a module, and use `ng-app` in the view to define the application scope.<br>
+	: 모듈 생성. ng-app을 사용해서 view 내에서 에플리케이션 스코프 정의
+
+1. Create a controller, and use `ng-controller` in the view to define the controller scope.<br>
+	: 컨트롤러 생성. ng-controller를 사용해서 view내에서 컨트롤러 스코프 정의 
+
+1. Add data to `$scope` in the controller so they can be displayed with expressions in the view.<br>
+	: 컨트롤러내의 $scope에 데이터를 첨가하는데, view에서 expression(표현식)으로 나타낼 수 있다. 
+
+
+### 4_Filters
+
+```
+<p class="title">{{ product.name | uppercase }} </p>  // 대문자로
+<p class="price">{{ product.price | currency }} </p>  // $, 소숫점 두자리
+<p class="date">{{ product.pubdate | date}} </p>  // 날짜표현 
+```
+
+- sorting(정렬), formatting(형식에 맞춰 변경), filtering data(데이터 필터) 하는데 사용된다. 
+- 파이프(`|`)를 붙인다. 
+- [more built-in filters 더보기](https://docs.angularjs.org/api/ng/filter)
+
+
+### 6,7_ng-repeat
+
+##### MainController.js 파일 
+
+```
+$scope.products =
+    [
+      {
+        name: 'The Book of Trees',
+        price: 19,
+        pubdate: new Date('2014', '03', '08'),
+        cover: 'img/the-book-of-trees.jpg'
+      },
+      {
+        name: 'Program or be Programmed',
+        price: 8,
+        pubdate: new Date('2013', '08', '01'),
+        cover: 'img/program-or-be-programmed.jpg'
+      }
+    ]
+
+```
+
+##### index.html파일 
+
+```
+<div ng-repeat="product in products" class="col-md-6">
+  <div class="thumbnail">
+    <img ng-src="{{ product.cover }}">
+    <p class="title">{{ product.name | uppercase }} </p>
+    <p class="price">{{ product.price | currency }} </p>
+    <p class="date">{{ product.pubdate | date}} </p>
+  </div>
+</div>
+```
+
+- In the controller, we used `products` to store an array containing two objects.<br>
+컨트롤러에서 두개의 객체를 가지고 있는 배열을 저장하기 위해 `products를 사용했다. 
+
+- Then in the view, we added `<div ng-repeat="product in products">`. <br>
+Like `ng-app` and `ng-controller`, the `ng-repeat` is a directive. <br>
+It **loops** through an array and displays each element. <br>
+Here, the `ng-repeat` repeats all the HTML inside `<div class="col-md-6">` for each element in the `products` array.<br>
+view에서 `ng-repeat="product in products"`<br>
+`ng-repeat`도 디렉티브이다.<br>
+`products`배열 각 요소를 html안에서 repeat해준다. 
