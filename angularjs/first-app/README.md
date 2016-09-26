@@ -13,10 +13,10 @@
 ```
 var app = angular.module("myApp", []); 
 ```
-- created a new module name myApp. <br>
-새 모듈(이름이 myApp인)을 만든다. 
+created a new module name myApp. <br>
+새 모듈(이름이 myApp인)을 만든다. <br>
 
-- A module contains the different components of an AngularJS app.<br>
+A module contains the different components of an AngularJS app.<br>
 모듈은 앵귤러앱의 서로다른 구성요소를 담고있다. 
 
 
@@ -31,10 +31,10 @@ var app = angular.module("myApp", []);
 <!-- Controllers -->
 <script src="js/controllers/MainController.js"></script>
 ```
-- The `ng-app` is called a *directive*. <br>
+The `ng-app` is called a *directive*. <br>
 `ng-app`은 디렉티브(지시자)라 부른다.  <br>
 
-It tells AngularJS that the `myApp` module will live within the `<body>` element, termed the application's `scope`. <br>
+It tells AngularJS that the `myApp` module will live within the `<body>` element, termed the application's *scope*. <br>
 위 코드의 경우 `myApp` 모듈은 `<body>`요소내에서 유지되고, 애플리케이션의 스코프(범위)이다. <br>
 
 In other words, we used the `ng-app` directive to define the application scope. <br>
