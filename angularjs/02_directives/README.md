@@ -100,11 +100,12 @@ templateUrl은 scope.info의 데이터가 순서대로 사용되도록 한다. <
 app-info 요소의 info 속성으로 컨트롤러의 스코프로 부터 객체를 pass해 display한다. 
 
 - 그렇다면 본인만의 directive를 만드는 것이 유용한가?
-1. **Readability**.<br> Directives let you write expressive HTML. Looking at index.html you can understand the app's behavior just by reading the HTML.<br><br>
+
+ 1. **Readability**.<br> Directives let you write expressive HTML. Looking at index.html you can understand the app's behavior just by reading the HTML.<br><br>
 알아보기 쉽다. <br>
 디렉티브는 html 표현식을 쓰게 해준다. index.html을 보면 앱의 behavior를 단지 html을 읽는 것만으로 이해할 수 있게 해준다. 
 
-2. Reusability.<br> Directives let you create self-contained units of functionality. We could easily plug in this directive into another AngularJS app and avoid writing a lot of repetitive HTML.<br><br>
+ 2. Reusability.<br> Directives let you create self-contained units of functionality. We could easily plug in this directive into another AngularJS app and avoid writing a lot of repetitive HTML.<br><br>
 재사용할 수 있다. <br>
 디렉티브는 기능 단위를 독립적으로 만들 수 있게 해준다. 우리는 다른 앵귤러 앱에서 이 디렉티브로 쉽게 기능을 확장할 수 있다. 그리고 많은 html 반복 코드를 피할 수 있다. 
 
