@@ -108,3 +108,112 @@ app-info 요소의 info 속성으로 컨트롤러의 스코프로 부터 객체�
 재사용할 수 있다. <br>
 디렉티브는 기능 단위를 독립적으로 만들 수 있게 해준다. 우리는 다른 앵귤러 앱에서 이 디렉티브로 쉽게 기능을 확장할 수 있다. 그리고 많은 html 반복 코드를 피할 수 있다. 
 
+### 4_ Built-in and Custom Directives
+
+- We know that AngularJS comes with a few built-in directives like `ng-repeat` and `ng-click`.<br>
+We've seen that AngularJS makes it possible to create your own custom directives, such as `<app-info>`.<br>
+We can use Angular's built-in directives together with custom directives to create more readable apps.<br><br>
+내장 디렉토리와 우리가 만든 디렉토리를 함께 사용하여 더욱 알아보기 쉬운 앱을 만들 수 있다. 
+
+##### 컨트롤러에 다음과 같은 배열 프로퍼티 추가(코드 리펙토링 전에는 모두 따로 프로퍼티를 주었었다.)
+
+```
+$scope.apps = [
+  {
+    icon: 'img/move.jpg',
+    title: 'MOVE',
+    developer: 'MOVE, Inc.',
+    price: 0.99
+  },
+  {
+    icon: 'img/shutterbugg.jpg',
+    title: 'Shutterbugg',
+    developer: 'Chico Dusty',
+    price: 2.99
+  },
+  {
+    icon: 'img/gameboard.jpg',
+    title: 'Gameboard',
+    developer: 'Armando P.',
+    price: 1.99
+  },
+  {
+    icon: 'img/forecast.jpg',
+    title: 'Forecast',
+    developer: 'Forecast',
+    price: 1.99
+  }
+]
+```
+
+##### index.html 코드 리펙토링 
+
+```
+<div class="card" ng-repeat="app in apps">
+   <app-info info="app"></app-info>
+</div>
+```
+
+### 5,6_installApp
+
+- Directives are a core feature of AngularJS. So far we've used custom directives to simply display static content, but they can do more than this. It's possible to bake interactivity into directives.<br><br>
+디렉티브는 앵귤러의 핵심 특성이다. <br>
+지금까지 custom 디렉티브로 간단하게 정적인 콘텐츠만 보여줬지만 상호작용하게 할 수 있다.
+
+##### js/directives/installApp.js
+
+```
+app.directive('installApp', function(){
+  return {
+    restrict: 'E',
+    scope: {
+    },
+    templateUrl: 'js/directives/installApp.html',
+    link: function(scope, element, attrs) {
+      scope.buttonText = "Install",
+      scope.installed = false,
+      
+      scope.download = function() {
+        element.toggleClass('btn-active');
+        if(scope.installed) {
+          scope.buttonText = "Install";
+          scope.installed = false;
+        } else {
+          scope.buttonText = "Uninstall";
+          scope.installed = ture;
+        }
+      }
+    }
+  }
+});
+```
+
+- The `link` is used to create interactive directives that respond to user actions.<br><br>
+네번째 옵션인 link는 상호작용하는 디렉티브를 만드는데 사용된다. 사용자의 액션에 반응하는 
+
+- `function(scope, element, attrs)` 
+1. `scope` : 새로운 프로퍼티들은 `$scope`에 attached되어, 디렉티브의 템플릿에서 사용 가능하게 된다. 
+1. `element` : 디렉티브의 html 요소 
+1. `attrs` : 요소의 속성을 담고 있다. 
+
+
+##### js/directives/installApp.html
+
+```
+<button class="btn btn-active" ng-click="download()">
+  {{ buttonText }}
+</button>
+```
+
+- 이 템플릿은 앵귤러의 내장 `ng-click` 디렉티브를 사용했다. 
+- 앱이 인스롤되면 `download()`함수는 다음 세가지 일을 한다. 
+1. toggles the `.btn-active` class
+1. changes the button text to "Uninstall"
+1. changes scope.installed to true
+
+### 8_Generalizations (총괄)
+
+- Directives are a powerful way to create self-contained, interactive components.<br>
+Unlike jQuery which adds interactivity as a layer on top of HTML, AngularJS treats interactivity as a native component of HTML.<br><br>
+디렉티브는 독립적이고 상호작용하는 구성요소를 만들 수 있는 강력한 방법이다. <br>
+html의 상단에 레이어로 상호작용을 추가하는 jQuery와는 다르게 앵귤러는 html의 본래 구성요소와 같이 상호작용하도록 처리한다. 
