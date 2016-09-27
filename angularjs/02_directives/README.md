@@ -6,7 +6,7 @@
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/02_directives)
 - 중요! 해석이 틀릴 수 있으니 조심 ^^ 
 
-### 1_ directives 1
+### 1,2,3_ directives
 
 ##### index.html 코드 리펙토링 전 
 
@@ -55,10 +55,10 @@ app.directive('appInfo', function(){
 - we made a new *directive*. We used `app.directive` to create a new directive named `'appInfo'`. <br> 
 It returns an object with three options.<br><br>
 app.directive으로 이름이 appInfo인 새 디렉티브를 만들었다. <br>
-이는 다음 3 옵션을 가진 객체를 반환한다. 
+이는 다음 세 옵션을 가진 객체를 반환한다. 
 
 1. `restrict` specifies how the directive will be used in the view.<br> The `'E'` means it will be used as a new HTML element.<br><br>
-restrict는 어떻게 디렉티브가 view에서 사용될지 명시한다. <br>
+restrict(뜻: 제한하다)는 어떻게 디렉티브가 view에서 사용될지 명시한다. <br>
 'E'는 html의 새 요소처럼 사용될 것이라는 의미이다. 
 
 1. scope specifies that we will pass information into this directive through an attribute named info.<br> The `=` tells the directive to look for an attribute named info in the `<app-info>` element, like this:<br>
@@ -67,7 +67,7 @@ scope는 info속성을 통해 이 디렉티브에서 정보를 통과하도록 �
 info안의 데이터는 templateURL에 주어진 템플릿에서 사용되기 위해 이용가능하게 된다.
 
 1. `templateUrl` specifies the HTML to use in order to display the data in `scope.info`. Here we use the HTML in `js/directives/appInfo.html`.<br><br>
-templateUrl은 scope.info의 데이터가 순서대로 보이도록 한다. <br>
+templateUrl은 scope.info의 데이터가 순서대로 사용되도록 한다. <br>
 
 
 ##### js/directives/appInfo.html
@@ -98,4 +98,13 @@ templateUrl은 scope.info의 데이터가 순서대로 보이도록 한다. <br>
 - Then in index.html we use the new directive as the HTML element `<app-info>`. We pass in objects from the controller's scope into the `<app-info>` element's `info` attribute so that it displays.<br><br>
 새 디렉티브를 사용해서 `<app-info>` html 요소를 사용하였다. <br>
 app-info 요소의 info 속성으로 컨트롤러의 스코프로 부터 객체를 pass해 display한다. 
+
+- 그렇다면 본인만의 directive를 만드는 것이 유용한가?
+1. **Readability**.<br> Directives let you write expressive HTML. Looking at index.html you can understand the app's behavior just by reading the HTML.<br><br>
+알아보기 쉽다. <br>
+디렉티브는 html 표현식을 쓰게 해준다. index.html을 보면 앱의 behavior를 단지 html을 읽는 것만으로 이해할 수 있게 해준다. 
+
+2. Reusability.<br> Directives let you create self-contained units of functionality. We could easily plug in this directive into another AngularJS app and avoid writing a lot of repetitive HTML.<br><br>
+재사용할 수 있다. <br>
+디렉티브는 기능 단위를 독립적으로 만들 수 있게 해준다. 우리는 다른 앵귤러 앱에서 이 디렉티브로 쉽게 기능을 확장할 수 있다. 그리고 많은 html 반복 코드를 피할 수 있다. 
 
