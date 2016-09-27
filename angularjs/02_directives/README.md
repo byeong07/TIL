@@ -204,3 +204,16 @@ app.directive('installApp', function(){
   {{ buttonText }}
 </button>
 ```
+
+- 이 템플릿은 앵귤러의 내장 `ng-click` 디렉티브를 사용했다. 
+- 앱이 인스롤되면 `download()`함수는 다음 세가지 일을 한다. 
+1. toggles the `.btn-active` class
+1. changes the button text to "Uninstall"
+1. changes scope.installed to true
+
+### 8_Generalizations (총괄)
+
+- Directives are a powerful way to create self-contained, interactive components.<br>
+Unlike jQuery which adds interactivity as a layer on top of HTML, AngularJS treats interactivity as a native component of HTML.<br><br>
+디렉티브는 독립적이고 상호작용하는 구성요소를 만들 수 있는 강력한 방법이다. <br>
+html의 상단에 레이어로 상호작용을 추가하는 jQuery와는 다르게 앵귤러는 html의 본래 구성요소와 같이 상호작용하도록 처리한다. 
