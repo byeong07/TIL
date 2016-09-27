@@ -108,3 +108,48 @@ app-info 요소의 info 속성으로 컨트롤러의 스코프로 부터 객체�
 재사용할 수 있다. <br>
 디렉티브는 기능 단위를 독립적으로 만들 수 있게 해준다. 우리는 다른 앵귤러 앱에서 이 디렉티브로 쉽게 기능을 확장할 수 있다. 그리고 많은 html 반복 코드를 피할 수 있다. 
 
+### 4_ Built-in and Custom Directives
+
+- We know that AngularJS comes with a few built-in directives like `ng-repeat` and `ng-click`.<br>
+We've seen that AngularJS makes it possible to create your own custom directives, such as `<app-info>`.<br>
+We can use Angular's built-in directives together with custom directives to create more readable apps.<br><br>
+내장 디렉토리와 우리가 만든 디렉토리를 함께 사용하여 더욱 알아보기 쉬운 앱을 만들 수 있다. 
+
+##### 컨트롤러에 다음과 같은 배열 프로퍼티 추가(코드 리펙토링 전에는 모두 따로 프로퍼티를 주었었다.)
+
+```
+$scope.apps = [
+  {
+    icon: 'img/move.jpg',
+    title: 'MOVE',
+    developer: 'MOVE, Inc.',
+    price: 0.99
+  },
+  {
+    icon: 'img/shutterbugg.jpg',
+    title: 'Shutterbugg',
+    developer: 'Chico Dusty',
+    price: 2.99
+  },
+  {
+    icon: 'img/gameboard.jpg',
+    title: 'Gameboard',
+    developer: 'Armando P.',
+    price: 1.99
+  },
+  {
+    icon: 'img/forecast.jpg',
+    title: 'Forecast',
+    developer: 'Forecast',
+    price: 1.99
+  }
+]
+```
+
+##### index.html 코드 리펙토링 
+
+```
+<div class="card" ng-repeat="app in apps">
+   <app-info info="app"></app-info>
+</div>
+```
