@@ -59,7 +59,7 @@ app.directive으로 이름이 appInfo인 새 디렉티브를 만들었다. <br>
 
 1. `restrict` specifies how the directive will be used in the view.<br> The `'E'` means it will be used as a new HTML element.<br><br>
 restrict(뜻: 제한하다)는 어떻게 디렉티브가 view에서 사용될지 명시한다. <br>
-'E'는 html의 새 요소처럼 사용될 것이라는 의미이다. 
+'E'는 html의 새로운 요소(element)처럼 사용될 것이라는 의미이다. 
 
 1. scope specifies that we will pass information into this directive through an attribute named info.<br> The `=` tells the directive to look for an attribute named info in the `<app-info>` element, like this:<br>
 The data in `info` becomes available to use in the template given by `templateURL`.<br><br>
@@ -192,9 +192,9 @@ app.directive('installApp', function(){
 네번째 옵션인 link는 상호작용하는 디렉티브를 만드는데 사용된다. 사용자의 액션에 반응하는 
 
 - `function(scope, element, attrs)` 
-1. `scope` : 새로운 프로퍼티들은 `$scope`에 attached되어, 디렉티브의 템플릿에서 사용 가능하게 된다. 
-1. `element` : 디렉티브의 html 요소 
-1. `attrs` : 요소의 속성을 담고 있다. 
+ - `scope` : 새로운 프로퍼티들은 `$scope`에 attached되어, 디렉티브의 템플릿에서 사용 가능하게 된다. 
+ - `element` : 디렉티브의 html 요소 
+ - `attrs` : 요소의 속성을 담고 있다. 
 
 
 ##### js/directives/installApp.html
@@ -207,9 +207,9 @@ app.directive('installApp', function(){
 
 - 이 템플릿은 앵귤러의 내장 `ng-click` 디렉티브를 사용했다. 
 - 앱이 인스롤되면 `download()`함수는 다음 세가지 일을 한다. 
-1. toggles the `.btn-active` class
-1. changes the button text to "Uninstall"
-1. changes scope.installed to true
+ - toggles the `.btn-active` class
+ - changes the button text to "Uninstall"
+ - changes scope.installed to true
 
 ### 8_Generalizations (총괄)
 
