@@ -68,8 +68,8 @@ app.controller('MainController', ['$scope', 'forecast', function($scope, forecas
 <script src="js/services/forecast.js"></script>
 ```
 
-- As before, any properties attached to `$scope` become available to use in the view. This means in index.html, we can display the `city_name' using an expression as done before.<br><br>
-`$scope`의 프로퍼티는 view에서 사용가능하다. 이 것은 index.html에서 표현식으로 city_name을 디스플레이할 수 있다는 것을 의미한다. 
+- As before, any properties attached to `$scope` become available to use in the view. This means in index.html, we can display the `city_name` using an expression as done before.<br><br>
+$scope의 프로퍼티는 view에서 사용가능하다. 이 것은 index.html에서 표현식으로 city_name을 디스플레이할 수 있다는 것을 의미한다. 
 
 
 ##### forecast.json
