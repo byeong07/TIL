@@ -1,6 +1,6 @@
 # AngularJS
 
-## Routing 
+## Routing : Gallery app
 
 - [코드카데미](https://www.codecademy.com) Lesson 4. Routing
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/04_routing)
@@ -17,3 +17,27 @@
 
 - A better solution is to use multiple templates that display different pieces of data based on the URL that the user is visiting. We can do this with Angular's *application routes*.<br><br>
 더 나은 해결책은 사용자가 방문하는 URL에 기초하여 데이터의 다른 부분을 표시하는 다수의 템플릿을 사용하는 것이다.<br>
+
+##### index.html
+
+```
+<div ng-view>
+</div>
+```
+
+##### app.js
+
+```
+var app = angular.module('GalleryApp', ['ngRoute']);
+
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when('/', {
+      controller: 'HomeController',
+      templateUrl: 'views/home.html'
+    })
+    .otherwise({
+      redirectTo: '/'
+  });
+});
+```

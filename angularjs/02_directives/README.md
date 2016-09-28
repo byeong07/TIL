@@ -1,6 +1,6 @@
 # AngularJS
 
-## Directives
+## Directives : App Market App
 
 - [코드카데미](https://www.codecademy.com) Lesson 2. Directives
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/02_directives)
