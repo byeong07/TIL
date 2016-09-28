@@ -14,3 +14,8 @@ Today I Learned~!! 열공모드~*
 - 코드카데미 Lesson 2. Directives 공부 후 github에 정리하기
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/02_directives)
 - [설명 보기](https://github.com/sharryhong/TIL/tree/master/angularjs/02_directives)
+
+### 3. Services
+- 코드카데미 Lesson 3. Services 공부 후 github에 정리하기
+- [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/03_services)
+- [설명 보기](https://github.com/sharryhong/TIL/tree/master/angularjs/03_services)
