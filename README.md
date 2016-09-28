@@ -19,3 +19,8 @@ Today I Learned~!! 열공모드~*
 - 코드카데미 Lesson 3. Services 공부 후 github에 정리하기
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/03_services)
 - [설명 보기](https://github.com/sharryhong/TIL/tree/master/angularjs/03_services)
+
+### 4. Routing
+- 코드카데미 Lesson 4. Routing 공부 후 github에 정리하기
+- [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/04_routing)
+- [설명 보기](https://github.com/sharryhong/TIL/tree/master/angularjs/04_routing)
