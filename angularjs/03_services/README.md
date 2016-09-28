@@ -6,7 +6,7 @@
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/03_services)
 - 중요! 해석이 틀릴 수 있으니 조심 ^^ 
 
-### 01_services
+### 1. Services I
 
 - So far we've made AngularJS apps by adding data to a controller, and then displaying it in a view. <br><br>
 지금까지 컨트롤러에서 데이터를 추가해서 앵귤러 앱을 만들었다. 그다음에 view에서 데이터를 보여주었다. 
@@ -87,3 +87,39 @@ $scope의 프로퍼티는 view에서 사용가능하다. 이 것은 index.html�
     },
     ...
 ```
+
+### 2. Services II
+
+- JSON의 나머지 데이터들 view에 보여주기 
+
+##### index.html 
+
+```
+<div class="forecast" ng-repeat="day in fiveDay.days">
+  <div class="day row">
+    <!-- datetime -->
+    <div class="weekday col-xs-4">
+      {{ day.datetime | date }}
+    </div>
+    <!-- icon -->
+    <div class="weather col-xs-3">
+      <img ng-src="{{ day.icon }}">
+    </div>
+    <div class="col-xs-1"></div>
+    <!-- high -->
+    <div class="high col-xs-2">
+      {{ day.high }}
+    </div>
+    <!-- low -->
+    <div class="low col-xs-2">
+      {{ day.low }}
+    </div>
+```
+
+### 3. Generalizations
+
+- Directives are a way to make standalone UI components, like `<app-info>`.<br><br>
+디렉티브는 독립적인 UI 구성요소를 만드는 방법이다. 
+
+- Services are a way to make standalone communication logic, like `forecast` which fetches weather data from a server.<br><br>
+서비스는 서버로부터 날씨 데이터를 받는 forecast처럼 독립적인 통신 로직을 만드는 방법이다. 
