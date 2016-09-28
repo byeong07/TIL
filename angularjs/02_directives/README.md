@@ -59,7 +59,7 @@ app.directive으로 이름이 appInfo인 새 디렉티브를 만들었다. <br>
 
 1. `restrict` specifies how the directive will be used in the view.<br> The `'E'` means it will be used as a new HTML element.<br><br>
 restrict(뜻: 제한하다)는 어떻게 디렉티브가 view에서 사용될지 명시한다. <br>
-'E'는 html의 새 요소처럼 사용될 것이라는 의미이다. 
+'E'는 html의 새로운 요소(element)처럼 사용될 것이라는 의미이다. 
 
 1. scope specifies that we will pass information into this directive through an attribute named info.<br> The `=` tells the directive to look for an attribute named info in the `<app-info>` element, like this:<br>
 The data in `info` becomes available to use in the template given by `templateURL`.<br><br>
@@ -100,11 +100,12 @@ templateUrl은 scope.info의 데이터가 순서대로 사용되도록 한다. <
 app-info 요소의 info 속성으로 컨트롤러의 스코프로 부터 객체를 pass해 display한다. 
 
 - 그렇다면 본인만의 directive를 만드는 것이 유용한가?
-1. **Readability**.<br> Directives let you write expressive HTML. Looking at index.html you can understand the app's behavior just by reading the HTML.<br><br>
+
+ 1. **Readability**.<br> Directives let you write expressive HTML. Looking at index.html you can understand the app's behavior just by reading the HTML.<br><br>
 알아보기 쉽다. <br>
 디렉티브는 html 표현식을 쓰게 해준다. index.html을 보면 앱의 behavior를 단지 html을 읽는 것만으로 이해할 수 있게 해준다. 
 
-2. Reusability.<br> Directives let you create self-contained units of functionality. We could easily plug in this directive into another AngularJS app and avoid writing a lot of repetitive HTML.<br><br>
+ 2. Reusability.<br> Directives let you create self-contained units of functionality. We could easily plug in this directive into another AngularJS app and avoid writing a lot of repetitive HTML.<br><br>
 재사용할 수 있다. <br>
 디렉티브는 기능 단위를 독립적으로 만들 수 있게 해준다. 우리는 다른 앵귤러 앱에서 이 디렉티브로 쉽게 기능을 확장할 수 있다. 그리고 많은 html 반복 코드를 피할 수 있다. 
 
@@ -192,9 +193,9 @@ app.directive('installApp', function(){
 네번째 옵션인 link는 상호작용하는 디렉티브를 만드는데 사용된다. 사용자의 액션에 반응하는 
 
 - `function(scope, element, attrs)` 
-1. `scope` : 새로운 프로퍼티들은 `$scope`에 attached되어, 디렉티브의 템플릿에서 사용 가능하게 된다. 
-1. `element` : 디렉티브의 html 요소 
-1. `attrs` : 요소의 속성을 담고 있다. 
+ - `scope` : 새로운 프로퍼티들은 `$scope`에 attached되어, 디렉티브의 템플릿에서 사용 가능하게 된다. 
+ - `element` : 디렉티브의 html 요소 
+ - `attrs` : 요소의 속성을 담고 있다. 
 
 
 ##### js/directives/installApp.html
@@ -207,9 +208,9 @@ app.directive('installApp', function(){
 
 - 이 템플릿은 앵귤러의 내장 `ng-click` 디렉티브를 사용했다. 
 - 앱이 인스롤되면 `download()`함수는 다음 세가지 일을 한다. 
-1. toggles the `.btn-active` class
-1. changes the button text to "Uninstall"
-1. changes scope.installed to true
+ - toggles the `.btn-active` class
+ - changes the button text to "Uninstall"
+ - changes scope.installed to true
 
 ### 8_Generalizations (총괄)
 
