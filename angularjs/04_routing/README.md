@@ -13,7 +13,7 @@
 
 - But what happens when the app grows and needs to display more information? Stuffing more code to a single view will quickly make things messy.<br><br>
 앱이 커지고 더 많은 정보를 표시할 땐 어떻게 해야할까? <br>
-단일 뷰에 좀 더 코드를 쓰는 것은 엉망이 될 것이다.
+단일 뷰에 계속 코드를 쓰면 엉망이 될 것이다.
 
 - A better solution is to use multiple templates that display different pieces of data based on the URL that the user is visiting. We can do this with Angular's *application routes*.<br><br>
 더 나은 해결책은 사용자가 방문하는 URL에 기초하여 데이터의 다른 부분을 표시하는 다수의 템플릿을 사용하는 것이다.<br>
