@@ -1,6 +1,6 @@
 # AngularJS
 
-## Services 
+## Services : Weather forecast App
 
 - [코드카데미](https://www.codecademy.com) Lesson 3. Services
 - [결과물 바로가기](https://sharryhong.github.io/TIL/angularjs/03_services)
