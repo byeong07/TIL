@@ -7,7 +7,7 @@ Math.random()을 이용하여 0 ~ 100 사이 정수 구하기
 ```
 var randomNumber = Math.floor(Math.random() * 100);
 ```
-## Function 함수
+### Function 함수
 
 - A function is a block of code designed to perform a task.<br><br>
 함수는 작업을 수행하기 위해 설계된 코드 블록이다.
@@ -35,4 +35,18 @@ var customPizza = makePizza('cheese','thin crust');
 
 console.log(customPizza);
 ```
+
+### Scope 범위
+
+- Scope refers to where in a program a variable can be accessed.<br><br>
+스코프는 프로그램의 변수가 액세스 될 수있는 위치를 지칭한다. 
+
+- If you write a variable outside of a function in JavaScript, it's in the *global scope* and can be used by any other part of the program, just like the laundry room can be used by everyone in an apartment.<br><br>
+만약 변수가 함수 외부에서 선언되면, 글로벌 스코프로서 프로그램의 어느 파트에서나 사용될 수 있다. 
+
+- When we write variables inside a function, only that function has access to its own variables. Therefore, they are in the *functional scope*.<br><br>
+변수를 함수 내부에서 선언하면, 오직 그 함수에서만 변수를 엑세스 할 수 있다. 그것을 함수 스코프라고 한다. 
+
+- In addition to a function having access to its own variables, it also has access to variables in the global scope.<br><br>
+그리고 전역 변수에 대한 액세스도 할 수 있다.
 
