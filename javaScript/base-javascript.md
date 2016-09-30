@@ -76,3 +76,42 @@ bucketList.pop();
 console.log(bucketList.length); // 4
 console.log(bucketList);
 ```
+
+### Loops 반복문 
+
+1. `for` loops, which let us loop a block of code a known amount of times.<br><br>
+for 반복문은 몇 번 반복할 것인지 알 때 사용한다. 
+
+1. `while` loops, which let us loop a block of code an unkown amount of times.<br><br>
+while 반복문은 몇 번 반복할 것인지 모를 때 사용한다. 
+
+```
+var vacationSpots = ['seoul','puket','auckland'];
+
+for (var i = 0; i < vacationSpots.length; i--) {
+  console.log('I would love to visit ' + vacationSpots[i]);
+}
+```
+
+```
+var vacationSpots = ['seoul','puket','auckland'];
+
+for (var i = vacationSpots.length - 1; i >= 0; i--) {
+  console.log('I would love to visit ' + vacationSpots[i]);
+}
+```
+
+- 랜덤으로 카드 뒤집기 게임. Spade가 나올 때 까지 
+
+```
+var cards = ['Diamond', 'Spade', 'Heart', 'Club'];
+
+var currentCard = 'Heart';
+
+while (currentCard !== 'Spade') {
+  console.log(currentCard);
+  var randomNumber = Math.floor(Math.random() * 4);
+  currentCard = cards[randomNumber];
+}
+```
+
