@@ -50,3 +50,29 @@ console.log(customPizza);
 - In addition to a function having access to its own variables, it also has access to variables in the global scope.<br><br>
 그리고 전역 변수에 대한 액세스도 할 수 있다.
 
+### Arrays 배열 
+
+#### 내장 프로퍼티 `.length`
+
+```
+var bucketList = ['travelling with my family', 'making a useful web app', 'travelling in NZ'];
+
+console.log(bucketList.length);
+```
+
+#### push() 메소드 
+
+- push() allows us to add items to the end of an array. <br><br>
+배열의 끝에 아이템을 추가 할 수 있다. 
+
+#### pop() 메소드 
+
+- 끝에 있는 아이템을 하나 제거한다. 
+
+```
+var bucketList = ['travelling with my family', 'making a useful web app', 'travelling in NZ'];
+bucketList.push('learning a drum', 'meeting my old friends');
+bucketList.pop();
+console.log(bucketList.length); // 4
+console.log(bucketList);
+```
