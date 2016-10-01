@@ -9,3 +9,19 @@
 자바스크립트가 html요소를 선택할 수 있음을 보여준다. html 요소를 선택할 수 있기 때문에 그것을 조작할 수 있다. 
 
 > getElementsByClassName 등 으로 DOM을 선택하는 것보다 jQuery가 편리하다.
+
+### jQuery Selectors
+
+```
+function main(){
+  var $skillset = $('.skillset');
+  alert($skillset);
+}
+
+$(document).ready(main);
+```
+
+- 결과 : `[object Object]`
+
+- Now that we can select an element with jQuery, we can use built-in jQuery functions to modify it.<br><br>
+제이쿼리로 요소를 선택할 수 있고, 내장된 jQuery 함수로 수정할 수 있다. 
