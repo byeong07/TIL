@@ -1,5 +1,21 @@
 # JavaScript
-코드카데미 자바스크립트 공부 중 
+코드카데미 자바스크립트 공부 중 (기초)
+
+## What can we use JavaScript for?
+
+- make websites respond to user interaction.<br><br>
+사용자 상호작용에 응답하는 웹사이트 만들기 
+
+- build apps and games (e.g. blackjack)<br><br>
+앱과 게임 개발 
+
+- access information on the Internet (e.g. find out the top trending words on Twitter by topic)<br><br>
+인터넷에서 정보 엑세스 
+
+- organize and present data (e.g. automate spreadsheet work; data visualization)<br><br>
+(예: 스프레드 시트 작업 자동화, 데이터 시각화)
+
+### Math 내장함수 맛보기
 
 - `Math.random()` : This code will return a random number between 0 and 1.<br>
 Math.random()을 이용하여 0 ~ 100 사이 정수 구하기 
