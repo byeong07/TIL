@@ -197,6 +197,10 @@ app.directive('installApp', function(){
  - `element` : 디렉티브의 html 요소 
  - `attrs` : 요소의 속성을 담고 있다. 
 
+ - `element.toggleClass('btn-active');` 
+
+ > 이 디렉티브로 만든 `<install-app>`요소의 class에 토글된다. 
+
 
 ##### js/directives/installApp.html
 
