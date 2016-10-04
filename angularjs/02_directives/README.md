@@ -181,7 +181,7 @@ app.directive('installApp', function(){
           scope.installed = false;
         } else {
           scope.buttonText = "Uninstall";
-          scope.installed = ture;
+          scope.installed = true;
         }
       }
     }
