@@ -83,5 +83,7 @@ codecademy PRO를 하면서 핵심 내용 정리하기
  - index.html 에서 `ng-click` 디렉티브로 클릭시 컨트롤러에 추가한 메소드 실행하기 
 
 	```
-	<span class="decrease" ng-click="decrease($index)">-</span><span class="count"> {{ exercise.count }} </span><span class="increase" ng-click="increase($index)">+</span>
+	<span class="decrease" ng-click="decrease($index)">-</span>
+	<span class="count"> {{ exercise.count }} </span>
+	<span class="increase" ng-click="increase($index)">+</span>
 	```
