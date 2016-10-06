@@ -13,16 +13,16 @@ pro과정을 개설하니 intro, front-end, full stack 중에 고르라고 나�
 
 > We can't wait to get started on your journey as a full-stack developer.
 
-나도 그래 ㅋㅋ 
-
 ### Front-End (Client Side)
 
 - User <-> Web Browser ( <-> Server )
 
-- 코드카데미 과정 : HTML, CSS, JavaScript
+- 코드카데미 과정 : HTML, CSS, JavaScript, jQuery, AngularJS(framework)
 
 ### Back-End (Server Side)
 
 - ( Web Browser <-> ) Server <-> Database
 
-- 코드카데미 과정 : Ruby, Ruby on Rails
+- 코드카데미 과정 : Ruby, Ruby on Rails(framework), Rails Authentication(인증)
+
+> bash 터미널에서 서버 가동 `$ rails server -p 8000`
