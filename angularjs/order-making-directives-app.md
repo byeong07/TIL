@@ -32,15 +32,7 @@ codecademy PRO를 하면서 핵심 내용 정리하기
 	        city: "Charlotte",
 	        name: "Hornets"
 	      },
-	      home_team: {
-	        city: "New York",
-	        name: "Knicks"
-	      },
-	      period: "Final",
-	      visitor_score: 110,
-	      home_score: 82
-	    },
-	    ...
+	      ...
 	```
 
 4. view에서 컨트롤러 attach
@@ -51,7 +43,7 @@ codecademy PRO를 하면서 핵심 내용 정리하기
 	<div class="main" ng-controller="ScoreController">
 	```
 
-5. create a new directive 
+5. create a new custom directive 
 
  - js/directives/game.js
 
@@ -82,6 +74,42 @@ codecademy PRO를 하면서 핵심 내용 정리하기
  ```
  <game info="score" ng-repeat="score in scores"></game>
  ```
+
+8. interactive한 custom directive 추가해보기 
+
+ - plusOne.js 
+
+ ```
+ app.directive('plusOne', function(){
+	return {
+		restrict: 'E',
+		scope: {
+		},
+		templateUrl: 'js/directives/plusOne.html',
+		link: function(scope, element, attrs) {
+			scope.like = function() {
+				element.toggleClass('btn-like');
+			};
+		}
+	};
+ });
+ ```
+
+ 여기에서 `element.toggleClass('btn-like');` : `<plus-one></plus-one>`에 `btn-like` 클래스가 토글된다. 
+
+ - plusOne.html
+
+	```
+	<button class="btn" ng-click="like()">+1 Like</button>
+	```
+
+	버튼이 클릭되면 like메소드 실행 
+
+ - index.html 
+
+	```
+	<plus-one></plus-one>
+	```
 
 ### 참고 자료 
 
