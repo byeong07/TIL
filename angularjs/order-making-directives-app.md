@@ -1,6 +1,6 @@
 # AngularJS
 
-## 만든 Directives로 간단한 application 만드는 순서 
+## Custom Directives로 간단한 application 만들기 
 codecademy PRO를 하면서 핵심 내용 정리하기 
 
 1. Create a new module : 새 모듈을 만든다. 
