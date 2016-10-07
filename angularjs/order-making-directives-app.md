@@ -82,3 +82,7 @@ codecademy PRO를 하면서 핵심 내용 정리하기
  ```
  <game info="score" ng-repeat="score in scores"></game>
  ```
+
+### 참고 자료 
+
+- [Creating Custom Directives](https://docs.angularjs.org/guide/directive)
