@@ -20,10 +20,26 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
 	```
 
-2. module 안의 dependency array에 leaflet-directive를 inject한다. 아래 예 처럼
+2. module 안의 dependency array에 leaflet-directive를 inject한다. 예 : 
 
 	```
 	var app = angular.module('mapApp', ['leaflet-directive']);
 	```
 
-3. view (html)에서 `<leaflet></leaflet>` 만 해주면 기본 map이 삽입된다. 
+3. view (html)에서 `<leaflet></leaflet>` 만 해주면 기본 map이 삽입된다. <br><br>
+
+4. 특정 위치 정보를 받아 지도에 보여주고 싶을 때 (지도 중앙에 위치)
+
+ - controller에 프로퍼티를 만들어 위치를 지정한다. 예 : 
+
+	```
+	app.controller("MainController", [ '$scope', function($scope) {
+		$scope.mapCenter = { lat: 40.741934, lng: -74.004897, zoom: 17 };
+	}]);
+	```
+
+ - view에서 center 속성에 위에서 추가한 프로퍼티를 값으로 넣어준다. 
+
+	```
+	<leaflet center="mapCenter"></leaflet>
+	```
