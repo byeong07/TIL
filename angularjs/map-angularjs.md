@@ -30,7 +30,7 @@
 
 4. 특정 위치 정보를 받아 지도에 보여주고 싶을 때 (지도 중앙에 위치)
 
- - controller에 프로퍼티를 만들어 위치를 지정한다. 예 : 
+ - controller에 프로퍼티를 만들어 위치를 지정한다. (위도, 경도, 배율) 예 : 
 
 	```
 	app.controller("MainController", [ '$scope', function($scope) {
@@ -42,4 +42,18 @@
 
 	```
 	<leaflet center="mapCenter"></leaflet>
+	```
+
+5. 위치 표시(markers)를 하고 싶을 때 
+
+ - controller에 프로퍼티를 만들어 표시를 하고 싶은 위치를 지정한다. 배열로 여러개를 표시할 수 있다. 예 : 
+
+	```
+	$scope.mapMarkers = [ { lat: 40.741389, lng: -74.003056, message: "111 Eighth Avenue" }, { lat: 40.7425, lng: -74.006111, message: "Chelsea Market" } ];
+	```
+
+ - view에서 markers 속성에 위에서 추가한 프로퍼티를 값으로 넣어준다. 
+
+	```
+	<leaflet center="mapCenter" markers="mapMarkers"></leaflet>
 	```
