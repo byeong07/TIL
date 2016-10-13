@@ -22,8 +22,8 @@
 
 2. module 안의 dependency array에 leaflet-directive를 inject한다. 아래 예 처럼
 
-```
-var app = angular.module('mapApp', ['leaflet-directive']);
-```
+	```
+	var app = angular.module('mapApp', ['leaflet-directive']);
+	```
 
 3. view (html)에서 `<leaflet></leaflet>` 만 해주면 기본 map이 삽입된다. 
