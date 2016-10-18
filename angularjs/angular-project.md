@@ -25,3 +25,22 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
  - Model : task, list 등 
  - view : to do list가 어느 폰트, 컬러로 보여지는 것 
  - controller : 어떻게 task를 추가할 것인가, 완료 등.. view에서 버튼을 누르면 model이 추가된다 등 
+
+#### 폴더 
+- 각 MVC 방식 파트로 나눠 작업한다. 
+- 앵귤러는 MVC패턴을 따르고 있다. 
+- servises : data를 보유. 즉, Model이다. 
+- html : view를 마크업한다. 
+- controller : controller :) 
+
+#### 프로젝트에 대한 아이디어 
+- view : 제안 리스트를 보여준다. 
+- input이 필요한다. (제안 남기기)
+- upvote 할 수 있어야 한다. 
+- comment를 달 수 있어야 한다. 
+
+#### 이 아이디어를 code화 시켜보자. 
+- view : html file. 컨트롤러로 부터 제안 리스트를 받아 출력시킨다. 
+- input : 앱의 model (data) 로 부터 업데이트 받아야 한다. 컨트롤러는 view와 model사이의 중개자 역할을 하므로, 업데이트시 컨트롤러를 사용한다. 
+- upvote : model에 좋아요 수를 변경하는 버튼 추가 
+- comment : 다른 view를 추가 시킬 routing이 필요하다. 
