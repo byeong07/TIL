@@ -62,47 +62,54 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 
 #### build 
 1. app.js 
-모듈 정의 
+ - 모듈 정의 
 
 2. main controller 
-메인 컨트롤러 정의 
+ - 메인 컨트롤러 정의 
 
 3. html
-angular.js, ng-app, ng-controller, {{ 표현식 }} 으로 view 
+ - angular.js, ng-app, ng-controller, {{ 표현식 }} 으로 view 
 
 4. service 
-우선 demo data로 앱의 기능을 테스트해보자. (service에 우선 직접 데이터를 입력해서 테스트)
+ - 우선 demo data로 앱의 기능을 테스트해보자. (service에 우선 직접 데이터를 입력해서 테스트)
 나중엔 json 데이터로 불러들이게 된다. 
 
 5. display the contents of the service 
-- html파일에서 위에서 만든 service파일을 링크시킨다. 
-- controller에 service(data) 연결시킨다. 
-- controller내부에 view에서 게시물을 볼 수 있도록 객체를 생성한다. <br>
-예) $scope.posts = suggest.posts; // 이름이 posts인 앵귤러 객체를 만들어 이름이 suggest인 service의 posts (json 객체) 값을 넣는다.  
-- html에서 ng-repeat를 사용해서 service의 data내용을 출력시켜보자. 
+	- html파일에서 위에서 만든 service파일을 링크시킨다. 
+	- controller에 service(data) 연결시킨다. 
+	- controller내부에 view에서 게시물을 볼 수 있도록 객체를 생성한다. <br>
+	 - 예) $scope.posts = suggest.posts; // 이름이 posts인 앵귤러 객체를 만들어 이름이 suggest인 service의 posts (json 객체) 값을 넣는다.  
+	- html에서 ng-repeat를 사용해서 service의 data내용을 출력시켜보자. 
 
 6. 좋아요 순으로 정렬되게 하기 
-- view에서 filter, orderBy로 정렬한다. 
+	- view에서 filter, orderBy로 정렬한다. 
 
 7. 입력받아 submit 하기 
 
-view에서 아래 예처럼 input에 제안을 입력하고 button을 누르면 submit되게 한다. 
+	view에서 아래 예처럼 input에 제안을 입력하고 button을 누르면 submit되게 한다. 
 
-```
-<form ng-submit="addSuggestion()">
-	<input type="text" ng-model="title"></input>
-	<button type="submit">suggest</button>
-</form>
-```
+	```
+	<form ng-submit="addSuggestion()">
+		<input type="text" ng-model="title"></input>
+		<button type="submit">suggest</button>
+	</form>
+	```
 
-- ng-model="title" // input에 사용자가 입력하면 service/model내의 title 표시 
-- controller에서 addSuggestion() 함수 정의 하기
- - 함수 기능 : input에 내용적으면 $scope.posts.push() 하기. title update.  
- - [push 메소드](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+	- ng-model="title" // input에 사용자가 입력하면 service/model내의 title 표시 
+	- controller에서 addSuggestion() 함수 정의 하기
+	 - 함수 기능 : input에 내용적으면 $scope.posts.push() 하기. title update.  
+	 - [push 메소드](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 
 8. Upvote(좋아요, 찬성) 기능 추가하기 
-- view에서 ng-click="upVote(post)", {{post.upvotes}}
-- controller에서 +1 시키는 함수 추가 
+	- view에서 ng-click="upVote(post)", {{post.upvotes}}
+	- controller에서 +1 시키는 함수 추가 
 
 9. comment 기능 추가하기 
-- multiple pages를 위한 routing 필요, service에 comment추가, comment를 위한 controller필요 
+	- multiple pages를 위한 routing 필요, service에 comment추가, comment를 위한 controller필요
+
+- Route 추가 
+	1. html에 angular-route.min.js 링크 
+	2. app.js에 ngRoute 추가 
+	3. html에 ng-view 추가, 원래 있던 코드는 다른 html파일로 만들기 
+	4. app.js에 controller와 templateURL 연결 
+	5. 기존과 같이 결과가 잘 나오는지 확인한다.  
