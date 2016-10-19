@@ -7,12 +7,12 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 - most upvoted suggestions to rise to the top. 좋아요가 많은 순서대로 보여진다. 
 - comment. 각 제안에 덧글을 달 수 있다. 
 
-### Setup
+## Setup
 
 - AngularJS 다운 받기 
 - 나의 경우 : gulp로 javascript, sass 등 관리, jade 템플릿 엔진으로 html 공통 코드 관리 예정
 
-### Program Design
+## Program Design
 
 ####  MVC 패턴 
 - 앵귤러 앱은 MVC (Model, View, Controller) 패턴을 구현한다. 이 것은 웹 애플리케이션을 구성하는 일반적인 방법이다. 
@@ -26,7 +26,6 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
  - view : to do list가 어느 폰트, 컬러로 보여지는 것 
  - controller : 어떻게 task를 추가할 것인가, 완료 등.. view에서 버튼을 누르면 model이 추가된다 등 
 
-#### 폴더 
 - 각 MVC 방식 파트로 나눠 작업한다. 
 - 앵귤러는 MVC패턴을 따르고 있다. 
 - servises : data를 보유. 즉, Model이다. 
@@ -44,3 +43,40 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 - input : 앱의 model (data) 로 부터 업데이트 받아야 한다. 컨트롤러는 view와 model사이의 중개자 역할을 하므로, 업데이트시 컨트롤러를 사용한다. 
 - upvote : model에 좋아요 수를 변경하는 버튼 추가 
 - comment : 다른 view를 추가 시킬 routing이 필요하다. 
+
+- 제안 리스트
+ - view : index.html 파일
+ - controller : 제안 아이템 action을 위한 controller
+- comments
+ - view : comment.html 파일. 댓글을 볼 수 있다.
+ - controller : 댓글 action을 위한 controller
+- 제안과 댓글 저장
+ - service : data 저장
+
+## Build Your App
+
+#### 폴더 구조 
+- 프로젝트 명 폴더 
+- views, css, img, js 폴더 
+- js / app.js파일, controllers, services, vendor 폴더
+
+#### build 
+1. app.js 
+모듈 정의 
+
+2. main controller 
+메인 컨트롤러 정의 
+
+3. html
+angular.js, ng-app, ng-controller, {{ 표현식 }} 으로 view 
+
+4. service 
+우선 demo data로 앱의 기능을 테스트해보자. (service에 우선 직접 데이터를 입력해서 테스트)
+나중엔 json 데이터로 불러들이게 된다. 
+
+5. display the contents of the service 
+- html파일에서 위에서 만든 service파일을 링크시킨다. 
+- controller에 service(data) 연결시킨다. 
+- controller내부에 view에서 게시물을 볼 수 있도록 객체를 생성한다. <br>
+예) $scope.posts = suggest.posts; // 이름이 posts인 앵귤러 객체를 만들어 이름이 suggest인 service의 posts (json 객체) 값을 넣는다.  
+- html에서 ng-repeat를 사용해서 service의 data내용을 출력시켜보자. 
