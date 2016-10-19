@@ -80,3 +80,29 @@ angular.js, ng-app, ng-controller, {{ 표현식 }} 으로 view
 - controller내부에 view에서 게시물을 볼 수 있도록 객체를 생성한다. <br>
 예) $scope.posts = suggest.posts; // 이름이 posts인 앵귤러 객체를 만들어 이름이 suggest인 service의 posts (json 객체) 값을 넣는다.  
 - html에서 ng-repeat를 사용해서 service의 data내용을 출력시켜보자. 
+
+6. 좋아요 순으로 정렬되게 하기 
+- view에서 filter, orderBy로 정렬한다. 
+
+7. 입력받아 submit 하기 
+
+view에서 아래 예처럼 input에 제안을 입력하고 button을 누르면 submit되게 한다. 
+
+```
+<form ng-submit="addSuggestion()">
+	<input type="text" ng-model="title"></input>
+	<button type="submit">suggest</button>
+</form>
+```
+
+- ng-model="title" // input에 사용자가 입력하면 service/model내의 title 표시 
+- controller에서 addSuggestion() 함수 정의 하기
+ - 함수 기능 : input에 내용적으면 $scope.posts.push() 하기. title update.  
+ - [push 메소드](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+
+8. Upvote(좋아요, 찬성) 기능 추가하기 
+- view에서 ng-click="upVote(post)", {{post.upvotes}}
+- controller에서 +1 시키는 함수 추가 
+
+9. comment 기능 추가하기 
+- multiple pages를 위한 routing 필요, service에 comment추가, comment를 위한 controller필요 
