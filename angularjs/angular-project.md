@@ -1,11 +1,11 @@
 # AngularJS Project
 codecademy pro AngularJS Final Project 과정을 통한 level up 
 
-### 목표 
-- submit your suggestion. user로 부터 제안을 받을 수 있다. 
-- upvote. 각 제안에 좋아요를 누를 수 있다. 
-- most upvoted suggestions to rise to the top. 좋아요가 많은 순서대로 보여진다. 
-- comment. 각 제안에 덧글을 달 수 있다. 
+## 목표 
+- submit your suggestion. // user로 부터 제안을 받을 수 있다. 
+- upvote. // 각 제안에 좋아요를 누를 수 있다. 
+- most upvoted suggestions to rise to the top. // 좋아요가 많은 순서대로 보여진다. 
+- comment. // 각 제안에 덧글을 달 수 있다. 
 
 ## Setup
 
@@ -53,7 +53,7 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 - 제안과 댓글 저장
  - service : data 저장
 
-## Build Your App
+## Build My App
 
 #### 폴더 구조 
 - 프로젝트 명 폴더 
@@ -113,3 +113,14 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 	3. html에 ng-view 추가, 원래 있던 코드는 다른 html파일로 만들기 
 	4. app.js에 controller와 templateURL 연결 
 	5. 기존과 같이 결과가 잘 나오는지 확인한다.  
+
+ - controller 추가 
+  - /suggestion/:id, addComment 함수 
+ - 템플릿 html 추가 
+
+10. Debugging the app
+ - 크롬 개발자도구 등에서 테스트하면서 작업한다.
+
+## Test My App
+ - 테스트를 해보며 필요한 기능 등을 추가, 수정 한다. 
+ - firebase등으로 실제 구현이 가능하도록 해보면 좋을 것 같다. 
