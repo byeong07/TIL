@@ -78,7 +78,7 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 	- html파일에서 위에서 만든 service파일을 링크시킨다. 
 	- controller에 service(data) 연결시킨다. 
 	- controller내부에 view에서 게시물을 볼 수 있도록 객체를 생성한다. <br>
-	 - 예) $scope.posts = suggest.posts; // 이름이 posts인 앵귤러 객체를 만들어 이름이 suggest인 service의 posts (json 객체) 값을 넣는다.  
+	 > 예) $scope.posts = suggest.posts; // 이름이 posts인 앵귤러 객체를 만들어 이름이 suggest인 service의 posts (json 객체) 값을 넣는다.  
 	- html에서 ng-repeat를 사용해서 service의 data내용을 출력시켜보자. 
 
 6. 좋아요 순으로 정렬되게 하기 
@@ -107,7 +107,7 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 9. comment 기능 추가하기 
 	- multiple pages를 위한 routing 필요, service에 comment추가, comment를 위한 controller필요
 
-- Route 추가 
+ - Route 추가 
 	1. html에 angular-route.min.js 링크 
 	2. app.js에 ngRoute 추가 
 	3. html에 ng-view 추가, 원래 있던 코드는 다른 html파일로 만들기 
