@@ -40,3 +40,16 @@ VM651:1 kshopzoa15@nate.com
 console.log(newEmail);
 VM652:1 kshopzoa15@gmail.com
 ```
+
+#### 실제 데이터로 바꾸기
+
+- helper.js
+```
+var HTMLheaderName = '<h1 id="name">%data%</h1>';
+```
+
+- `%data%`는 실제 데이터로 바꾸기. replace()메소드, append() or prepend()사용  
+```
+var formattedName = HTMLheaderName.replace("%data", name);
+$("#header").append(formattedName);
+```
