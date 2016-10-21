@@ -53,3 +53,62 @@ var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var formattedName = HTMLheaderName.replace("%data", name);
 $("#header").append(formattedName);
 ```
+
+#### toUpperCase(), slice() 
+
+- str.toUpperCase() : 대문자로 
+- str.slice(beginSlice[, endSlice]), arr.slice([begin[, end]]) : 문자, 배열에서 어느 부분을 복사하여 리턴할 것인가
+
+- audacity -> Udacity로 바꿔보자. 
+```
+var s = "audacity";
+
+var udacityizer = function(s) {  
+    s = s[1].toUpperCase() + s.slice(2);
+    return s;
+};
+console.log(udacityizer(s));
+```
+
+#### Truthy vs Falsy
+
+- Trythy : true, none-zero numbers, "string", objects, arrays, functions
+
+- Falsy : false, 0, "", undefined, null, NaN
+
+#### pop(), push()
+
+- arr.pop() : 배열 마지막 값을 제거하고 값 반환
+- arr.push(element1, ..., elementN) : 배열 마지막 값으로 추가하기  
+
+- 배열 마지막 숫자에 +1을 하여 새 배열에 저장하기 
+```
+var sampleArray = [0,0,7];
+var incrementLastArrayElement = function(_array) {
+    var newArray = [];
+    newArray = _array.slice(0); // 기존 배열 값과 동일하게 [0,0,7]
+    var lastNum = newArray.pop(); // 배열 마지막 값 7
+    newArray.push(lastNum+1); // 7+1을 배열 마지막 값으로 
+    return newArray;
+};
+console.log(incrementLastArrayElement(sampleArray));
+```
+#### split(), join()
+
+- str.split([separator[, limit]]) : 문자를 separator 기준으로 나눠 배열로 만든다.
+- str = arr.join([separator = ',']) : 배열의 요소를 문자열로 합한다. 
+
+- 
+```
+var name = "AlbERt EINstEiN";
+
+function nameChanger(oldName) {
+    var finalName = oldName.split(" ");   
+    finalName[0] = finalName[0].slice(0,1).toUpperCase()+finalName[0].slice(1).toLowerCase();
+    finalName[1] = finalName[1].toUpperCase();
+    finalName = finalName.join(" ");
+    return finalName;
+};
+
+console.log(nameChanger(name));
+```
