@@ -98,7 +98,7 @@ console.log(incrementLastArrayElement(sampleArray));
 - str.split([separator[, limit]]) : 문자를 separator 기준으로 나눠 배열로 만든다.
 - str = arr.join([separator = ',']) : 배열의 요소를 문자열로 합한다. 
 
-- 
+- 이름의 맨 앞글자는 대문자, 그 외는 소문자, 성은 모두 대문자로 만들기 
 ```
 var name = "AlbERt EINstEiN";
 
@@ -112,3 +112,23 @@ function nameChanger(oldName) {
 
 console.log(nameChanger(name));
 ```
+
+#### JSON (JavaScript Object Notation)
+
+- [JSON linter](http://jsonlint.com) : 문법 오류를 잡아줌
+
+#### `<` , `>` 대신 entity코드인 `&lt;`, `&gt;` 넣기 
+
+```
+var html = '<script src="http://hackyourwebsite.com/eviljavascript.js"></script>';
+var charEscape = function(_html) {
+    var newHTML = _html;
+    newHTML = newHTML.replace(/</g, "&lt;");
+    newHTML = newHTML.replace(/>/g, "&gt;");
+    return newHTML;
+};
+console.log(charEscape(html));
+```
+
+- [정규 표현식](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+ - g : Global search
