@@ -132,3 +132,42 @@ console.log(charEscape(html));
 
 - [정규 표현식](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
  - g : Global search
+
+ #### for in 문 
+ - 객체의 값을 순차적으로 접근한다.  
+
+ ```
+ var work = {
+  "jobs": [{
+      "title": "Web publisher",
+      "employer": "hilab",
+      "dates": "2016"
+    },
+    {
+      "title": "Flash Developer",
+      "employer": "freelancer",
+      "dates": "2007 ~ 2015"
+    }]
+}
+
+for(job in work.jobs) {
+  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+  var formattedJob = formattedEmployer + formattedTitle;
+  $(".work-entry:last").append(formattedJob);
+}
+
+ ```
+
+ ```
+ function locationizer(work_obj) {
+  var locationArray = [];
+  for(job in work_obj.jobs){
+      var newLocation = work_obj.jobs[job].location;
+      locationArray.push(newLocation);
+  }
+  return locationArray;
+}
+
+console.log(locationizer(work));
+ ```
