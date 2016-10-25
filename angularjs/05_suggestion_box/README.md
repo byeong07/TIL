@@ -9,8 +9,7 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 
 ## Setup
 
-- AngularJS 다운 받기 
-- 나의 경우 : gulp로 javascript, sass 등 관리, jade 템플릿 엔진으로 html 공통 코드 관리 예정
+- AngularJS 다운 받기 등 
 
 ## Program Design
 
@@ -73,6 +72,10 @@ codecademy pro AngularJS Final Project 과정을 통한 level up
 4. service 
  - 우선 demo data로 앱의 기능을 테스트해보자. (service에 우선 직접 데이터를 입력해서 테스트)
 나중엔 json 데이터로 불러들이게 된다. 
+
+ - js/suvices/suggestion.js
+ - 변수를 선언해서 JSON 객체를 저장한다. 
+ - 이 데이터를 return한다. 
 
 5. display the contents of the service 
 	- html파일에서 위에서 만든 service파일을 링크시킨다. 

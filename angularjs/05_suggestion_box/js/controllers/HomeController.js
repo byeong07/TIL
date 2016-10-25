@@ -1,3 +1,3 @@
-app.controller('HomeController', ['$scope', function($scope){
-	$scope.test = "test";
+app.controller('HomeController', ['$scope', 'suggestions', function($scope, suggestions){
+	$scope.posts = suggestions.posts;
 }]);
