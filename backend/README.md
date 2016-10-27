@@ -42,13 +42,15 @@ article{ // 브라우저창, 글자 등에 상관없이 article부분 늘어나�
 - 웹에서 : Web Client(= 웹 브라우저), Web Server
  - web server 소프트웨어 : Apache(오픈소스. 항상 1등) 등
 
-## server
+## server 테스트
 - Bitnami : `C:\Bitnami\wampstack-5.6.27-0\manager-windows.exe` -> Manage Servers에서 초록색 -> 웹브라우저가 ip(internet protocol)주소  http://127.0.0.1:81 에 접속(내 컴퓨터 접속)
+ - `C:\Bitnami\wampstack-5.6.27-0\apache2\htdocs`가 root
 - [관련 개발자 유머 ㅋㅋ](https://opentutorials.org/module/2326/13125)
 - 서버는 항상 켜져있다.(안정성이 생명) 예를들어 125.209.222.142는 naver 서버에 접속  
 - 웹 브라우저도 ip주소가 필요하다. 
 
-- `C:\Bitnami\wampstack-5.6.27-0\apache2\htdocs`가 root
+- 같은 와이파이에 접속해있을 경우.. IPv4주소로 들어가면 된다. 
+ - 이 주소로 스마트폰(같은 와이파이 접속)으로 테스트할 수 있다.  
 
 ## 그 외
 - <http://audiotool.com/> 음악 리믹스  
