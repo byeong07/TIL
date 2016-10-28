@@ -4,8 +4,10 @@
 	
 </head>
 <body>
+
 	<?php
-		print(1+1);
+		print(file_get_contents($_GET['id'])); 
 	?>
+
 </body>
 </html>
