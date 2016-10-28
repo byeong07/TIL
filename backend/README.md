@@ -1,4 +1,4 @@
-# server - 생활코딩 이고잉님 수업 
+# server - 생활코딩 이고잉님 수업 - DAY 01
 
 ## 수업 내용
 - Web Server
