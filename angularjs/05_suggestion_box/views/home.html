@@ -4,7 +4,8 @@
     <button type="button" ng-click="upVote(post)">Upvotes</button>
     {{ post.upvotes }}
   </p>
-  <p>{{ post.comment }}</p>
+  <!-- <p>{{ post.comment }}</p> -->
+  <a href="#/suggestion/{{$index}}">Comments</a>
 </div>
 
 <form ng-submit="addSuggestion()">

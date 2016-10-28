@@ -4,7 +4,16 @@ app.factory('suggestions', [function(){
 			{
 				title: 'Full-Stack Developer', 
 				upvotes: 15, 
-				comment: [],
+				comments: [
+					{
+						body: 'good1',
+						upvotes: 1
+					},
+					{
+						body: 'good2',
+						upvotes: 3					
+					},
+				]
 			},
 			{
 				title: 'AngularJS and Firebase', 

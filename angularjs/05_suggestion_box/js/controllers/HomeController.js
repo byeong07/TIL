@@ -2,7 +2,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 	$scope.posts = suggestions.posts;
 
 	$scope.addSuggestion = function(){
-		// input에 아무것도 안넣을 때 submit을 하지 않는다.
+		// nothing in input text
 		if( !$scope.title || $scope.title === "" ){
 			return;
 		}
