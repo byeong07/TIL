@@ -114,3 +114,26 @@ $college-ruled-style: (
 // 사용
 @include photo-content('titanosaur');
 ```
+
+### `&` selector usage inside of mixins. 믹스인 내에서 $ 
+
+```
+@mixin text-hover($color){
+  &:hover {
+      color: $color; 
+  }
+}
+
+.word { 
+	display: block;
+	@include text-hover(red);
+}
+
+// 결과 
+.word{ 
+	display: block;
+}
+.word:hover{
+	color: red;
+}
+```

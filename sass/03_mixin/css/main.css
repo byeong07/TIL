@@ -38,6 +38,8 @@
       text-align: center;
       position: relative;
       top: 40%; }
+      .notecard .front .word:hover {
+        color: red; }
   .notecard .back {
     transform: rotatey(-180deg);
     -webkit-transform: rotatey(-180deg);

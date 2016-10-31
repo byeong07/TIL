@@ -46,6 +46,12 @@ $stripe-properties: to bottom, 15%, blue, white;
   object-fit: cover;
 }
 
+@mixin hover-color($color) {
+  &:hover{
+    color: $color;
+  }
+}
+
 .notecard {
   @include transform-style(preserve-3d);
   @include transition(0.4s);
@@ -72,6 +78,7 @@ $stripe-properties: to bottom, 15%, blue, white;
   font-size: 20px;
 
     .word {
+      @include hover-color(red);
       display: block;
       text-align: center;
       position: relative;
