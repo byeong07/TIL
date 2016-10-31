@@ -25,43 +25,35 @@ ul {
   padding-top: 55px;
   padding-right: 30px;
   text-align: center; }
-
-.nav h4 {
-  -webkit-margin-before: 0;
-  margin-left: 50px; }
-
-.main ul {
-  padding-left: 30px; }
-
-.main li {
-  font-size: 0.85rem; }
+  .nav h4 {
+    -webkit-margin-before: 0;
+    margin-left: 50px; }
 
 .main {
   width: 85%;
   min-height: 750px;
   min-width: 600px;
   background-color: #FFCFCF; }
-
-.main h1 {
-  font-size: 62px;
-  -webkit-margin-before: 0;
-  padding-top: 40px;
-  padding-left: 30px; }
-
-.main video {
-  padding-left: 30px; }
-
-.main p {
-  padding-left: 30px;
-  width: 55%;
-  min-width: 550px; }
-
-.main a {
-  color: inherit;
-  padding-left: 30px;
-  text-decoration: none; }
-
-.main a:hover {
-  text-decoration: underline; }
+  .main ul {
+    padding-left: 30px; }
+    .main ul li {
+      font-size: 0.85rem; }
+  .main h1 {
+    font-size: 62px;
+    -webkit-margin-before: 0;
+    padding-top: 40px;
+    padding-left: 30px; }
+  .main video {
+    padding-left: 30px; }
+  .main p {
+    padding-left: 30px;
+    width: 55%;
+    min-width: 550px; }
+  .main a {
+    color: inherit;
+    padding-left: 30px;
+    text-decoration: none; }
+  .main a:hover {
+    text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */
