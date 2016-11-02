@@ -1,0 +1,12 @@
+$total: 10; 
+$step: 360deg / $total; 
+
+.ray {
+  height: 100vh / $total;
+}
+
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: adjust-hue(blue, $i * $step);
+  }
+}

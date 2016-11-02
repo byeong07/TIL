@@ -54,3 +54,42 @@ line-height: (600px)/9; //division
 margin-left: 20-10 px/ 2; //division
 font-size: 10px/8px; //not division
 ```
+
+### Each loops  `@each $item in $list`
+Each loops in Sass iterate on each of the values on a list. 
+
+```
+@each $item in $list {
+  //some rules and or conditions
+}
+```
+`$item`값은 `$list` 객체의 값으로 동적으로 할당된다. 
+
+```
+$list: (orange, purple, teal);
+
+@each $item in $list {
+  .#{$item} {
+    background: $item;
+  }
+}
+
+// 컴파일 결과 
+.orange {
+  background: orange;
+}
+
+.purple {
+  background: purple;
+}
+
+.teal {
+  background: teal;
+}
+
+```
+
+### For loops  `@for $i from $begin through(to) $end`
+
+- through : end 포함
+- to : end 불포함
