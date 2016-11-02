@@ -93,3 +93,74 @@ $list: (orange, purple, teal);
 
 - through : end 포함
 - to : end 불포함
+
+```
+$total: 10; 
+$step: 360deg / $total; 
+
+.ray {
+  height: 100vh / $total;
+}
+
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: adjust-hue(blue, $i * $step);
+  }
+}
+
+// 컴파일 결과 
+.ray {
+  height: 10vh; }
+
+.ray:nth-child(1) {
+  background: #9900ff; }
+
+.ray:nth-child(2) {
+  background: #ff00cc; }
+
+.ray:nth-child(3) {
+  background: #ff0033; }
+
+.ray:nth-child(4) {
+  background: #ff6600; }
+
+.ray:nth-child(5) {
+  background: yellow; }
+
+.ray:nth-child(6) {
+  background: #66ff00; }
+
+.ray:nth-child(7) {
+  background: #00ff33; }
+
+.ray:nth-child(8) {
+  background: #00ffcc; }
+
+.ray:nth-child(9) {
+  background: #0099ff; }
+
+.ray:nth-child(10) {
+  background: blue; }
+```
+
+### if(조건이, 참이면이것, 거짓이면 이것);
+
+```
+width: if( $condition, $value-if-true, $value-if-false);
+```
+
+### `@if @else-if @else`
+
+```
+@mixin deck($suit) {
+ @if($suit == hearts || $suit == spades){
+   color: blue;
+ }
+ @else-if($suit == clovers || $suit == diamonds){
+   color: red;
+ }
+ @else{
+   //some rule
+ }
+}
+```
