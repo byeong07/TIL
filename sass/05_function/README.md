@@ -147,6 +147,9 @@ $step: 360deg / $total;
 
 ```
 width: if( $condition, $value-if-true, $value-if-false);
+
+// 짝수면 0px, 홀수면 50px
+margin-left: if($i % 2 == 0, 0px, 50px);
 ```
 
 ### `@if @else-if @else`
