@@ -181,7 +181,7 @@ app.directive('installApp', function(){
           scope.installed = false;
         } else {
           scope.buttonText = "Uninstall";
-          scope.installed = ture;
+          scope.installed = true;
         }
       }
     }
@@ -197,6 +197,10 @@ app.directive('installApp', function(){
  - `element` : 디렉티브의 html 요소 
  - `attrs` : 요소의 속성을 담고 있다. 
 
+ - `element.toggleClass('btn-active');` 
+
+ > 이 디렉티브로 만든 `<install-app>`요소의 class에 토글된다. 
+
 
 ##### js/directives/installApp.html
 
@@ -207,7 +211,7 @@ app.directive('installApp', function(){
 ```
 
 - 이 템플릿은 앵귤러의 내장 `ng-click` 디렉티브를 사용했다. 
-- 앱이 인스롤되면 `download()`함수는 다음 세가지 일을 한다. 
+- 앱이 인스톨되면 `download()`함수는 다음 세가지 일을 한다. 
  - toggles the `.btn-active` class
  - changes the button text to "Uninstall"
  - changes scope.installed to true

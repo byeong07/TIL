@@ -1,0 +1,7 @@
+$list: (orange, purple, teal);
+
+@each $item in $list {
+  .#{$item} {
+    background: $item;
+  }
+}
