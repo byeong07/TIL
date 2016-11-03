@@ -66,4 +66,36 @@ SCSS파일 포함시키기
 }
 ```
 
-### `%placeholders`
+### `%` placeholders
+`%`기호를 붙인 플레이스홀더는 컴파일된 css에 코드로 나타나진 않고, @extend %abc 처럼 실제로 썼을 때만 코드로 나타난다. 
+
+```
+a%drink {
+  font-size: 2em;
+  background-color: $lemon-yellow;
+}
+
+.lemonade {
+@extend %drink;
+//more rules
+}
+
+// 컴파일 결과
+a.lemonade {
+  font-size: 2em;
+  background-color: $lemon-yellow;
+ }
+
+.lemonade {
+  //more rules
+}
+```
+
+#### placeholder와 mixin의 차이
+- placeholder를 사용하면 그룹으로 묶인다. 
+- mixin만 매개변수를 사용할 수 있다. 
+- 사용해봤을 때 미디어쿼리 내에선 placeholder가 되지 않았다. 
+
+### 정리 
+- 파일 구조, 네이밍 컨벤션, 변수, mixin 등이 복잡성을 줄여줄 수 있다. 
+- [sass 레퍼런스](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)

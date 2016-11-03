@@ -1,11 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico); 
-@import "helper/variables";
+@import url(https://fonts.googleapis.com/css?family=Pacifico); //CSS import
 @import "helper/placeholders";
 @import "helper/mixins";
+@import "helper/variables";
+
+%absolute {
+  position: absolute;
+}
 
 h1 {
   font-family: Roboto, sans-serif;
-  @include center;
+  @extend %center;
 }
 
 .banner {
@@ -18,6 +22,7 @@ h1 {
   } 
 
   .slogan {
+    @extend %absolute;
     background-color: $translucent-white;
     border: 4px solid black;
     top: 200px;
@@ -26,7 +31,8 @@ h1 {
     @include dimensions(50%, 200px);
 
     span {
-      @include center;
+      @extend %center;
+      @extend %absolute;
       width: 40%;
       left: 30%;
     }
@@ -35,6 +41,7 @@ h1 {
 
 .container {
   font-family: 'Pacifico', cursive;
+  @extend %center;
 
   .icon {
     display: inline-block;
