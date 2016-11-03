@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import "helper/variables";
+@import "helper/animations";
 
 body {
   padding-top: 5%;
@@ -30,16 +31,6 @@ h3 {
   left: -6.3%;  
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes slide-left {
-  from {
-    left: 20%;
-  }
-  to {
-    left: 50%;
-  }
-}
-
 circle {
   opacity: 1;
 }
@@ -57,11 +48,3 @@ circle {
   fill: white;
 }
 
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}

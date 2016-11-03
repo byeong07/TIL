@@ -1,4 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slide-left {
+  from {
+    left: 20%; }
+  to {
+    left: 50%; } }
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 body {
   padding-top: 5%;
   background-color: #F1F2F3; }
@@ -21,13 +34,6 @@ h3 {
   padding-top: 2%;
   left: -6.3%; }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes slide-left {
-  from {
-    left: 20%; }
-  to {
-    left: 50%; } }
-
 circle {
   opacity: 1; }
 
@@ -41,11 +47,5 @@ circle {
 #sass-logo {
   width: 100px;
   fill: white; }
-
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
