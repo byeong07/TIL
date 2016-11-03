@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import "helper/variables";
+
 body {
   padding-top: 5%;
   background-color: #F1F2F3;
@@ -13,12 +16,6 @@ body {
   left: 50%;
   @include slide-left;
 }
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-$slogan-font: 'Open Sans', sans-serif;
-$slogan-spacing: 0.183em;
-$blue: #204056;
 
 h3 {
   color: $blue;
