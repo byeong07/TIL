@@ -1,21 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import "helper/variables";
 @import "helper/animations";
+@import "helper/placeholders";
 
 body {
   padding-top: 5%;
   background-color: #F1F2F3;
 }
 
-@mixin slide-left{
-  animation: slide-left 3s;
-  -webkit-animation: slide-left 3s;
-}
-
 .slide-left {
   position: relative;
   left: 50%;
-  @include slide-left;
+  @extend %slide-left;
 }
 
 h3 {
@@ -37,7 +33,7 @@ circle {
 
 .element {
   position: absolute;
-  top: 15%;
+  top: 4%;
   left: 46%;
   animation-name: appear;
   animation-duration: 3s;

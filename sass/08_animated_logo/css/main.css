@@ -12,15 +12,17 @@
   100% {
     opacity: 1; } }
 
+.slide-left {
+  animation: slide-left 2s;
+  -webkit-animation: slide-left 2s; }
+
 body {
   padding-top: 5%;
   background-color: #F1F2F3; }
 
 .slide-left {
   position: relative;
-  left: 50%;
-  animation: slide-left 3s;
-  -webkit-animation: slide-left 3s; }
+  left: 50%; }
 
 h3 {
   color: #204056;
@@ -39,7 +41,7 @@ circle {
 
 .element {
   position: absolute;
-  top: 15%;
+  top: 4%;
   left: 46%;
   animation-name: appear;
   animation-duration: 3s; }
