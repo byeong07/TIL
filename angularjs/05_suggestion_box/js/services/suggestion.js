@@ -3,14 +3,14 @@ app.factory('suggestions', [function(){
 		posts: [
 			{
 				title: 'Full-Stack Developer', 
-				upvotes: 15, 
+				upvotes: 11, 
 				comments: [
 					{
-						body: 'good1',
+						body: 'good1-1',
 						upvotes: 1
 					},
 					{
-						body: 'good2',
+						body: 'good2-1',
 						upvotes: 3					
 					},
 				]
@@ -18,12 +18,17 @@ app.factory('suggestions', [function(){
 			{
 				title: 'AngularJS and Firebase', 
 				upvotes: 8, 
-				comment: [],
+				comments: [
+					{
+						body: 'good2',
+						upvotes: 2
+					}
+				]
 			},
 			{
 				title: 'Front-End Developer', 
 				upvotes: 12, 
-				comment: [],
+				comments: []
 			},
 		]
 	};
