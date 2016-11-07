@@ -1,0 +1,19 @@
+<form ng-submit="addSuggestion()">
+  <h3 class="form-title">Ask the speaker</h3>
+  <div>
+    <label for="question"><span class="fa fa-question-circle fa-2x" aria-hidden="true"></span><span class="blind">question</span></label>
+    <input type="text" id="question" placeholder="Type your question" ng-model="title">
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+<div ng-repeat="post in posts | orderBy:'-upvotes'">
+  <h2>{{ post.title }}</h2>
+  <p>
+    <button type="button" ng-click="upVote(post)">Upvotes</button>
+    {{ post.upvotes }}
+  </p>
+  <!-- <p>{{ post.comment }}</p> -->
+  <a href="#/suggestion/{{$index}}">Comments</a>
+</div>
+
