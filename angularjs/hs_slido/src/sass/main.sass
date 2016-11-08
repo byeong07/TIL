@@ -23,13 +23,20 @@ header
 	background-color: $main-color
 	box-shadow: 0 4px 8px rgba(0,0,0,.28)
 	h1
-		margin-top: 0
 		text-align: center
 
 .main-article
 	padding-top: 90px
+	.container
+		@media #{$mq-l}
+			margin-left: auto
+			margin-right: auto
+			max-width: 815px
 
 .form-title
+	margin-top: 1rem
+	margin-bottom: 0.63rem
+	padding-left: 0.63rem
 	font-size: 1rem
 	font-weight: normal
 	color: $gray-color
@@ -37,3 +44,18 @@ header
 .fa-question-circle
 	vertical-align: middle
 	color: $sub-color
+
+.ask-box
+	margin-bottom: 1rem
+
+.question-box
+	position: relative
+	padding: 14px
+	background-color: #fff
+	border: 1px solid $base-line
+	border-top: none
+	&:first-of-type
+		border-top: 1px solid $base-line
+	h3
+		font-size: 0.88rem
+		font-weight: bold

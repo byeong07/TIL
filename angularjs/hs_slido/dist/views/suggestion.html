@@ -1,5 +1,6 @@
-<div>
-  <h2>{{ post.title }}</h2>
+<div class="question-box">
+  <h3>{{ post.name }}</h3>
+  <h4>{{ post.title }}</h4>
   <ul ng-repeat="ct in post.comments | orderBy: '-upvotes'">
     <li>{{ ct.body }}
       <p>

@@ -1,6 +1,7 @@
 {
 	"posts": [
 		{
+			"name": "hong", 
 			"title": "Full-Stack Developer", 
 			"upvotes": 11, 
 			"comments": [
@@ -15,6 +16,7 @@
 			]
 		},
 		{
+			"name": "kim",
 			"title": "AngularJS and Firebase", 
 			"upvotes": 8, 
 			"comments": [
@@ -25,6 +27,7 @@
 			]
 		},
 		{
+			"name": "Anonymous",
 			"title": "Front-End Developer", 
 			"upvotes": 12, 
 			"comments": []

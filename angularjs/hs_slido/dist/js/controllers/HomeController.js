@@ -5,16 +5,21 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 		$scope.posts = data.posts;
 
 		$scope.addSuggestion = function(){
-			// nothing in input text
+
+			if( !$scope.name || $scope.name === "" ){
+				$scope.name = "Anonymous";
+			}
 			if( !$scope.title || $scope.title === "" ){
 				return;
 			}
 			$scope.posts.push({
+				name: $scope.name,
 				title: $scope.title,
 				upvotes: 0,
 				comments: []
 			});
 			// after submit, clear input text
+			$scope.name = '';
 			$scope.title = '';
 		};
 

@@ -346,6 +346,7 @@ input[type="password"] {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 0.88rem;
   color: #555;
 }
 
@@ -355,14 +356,37 @@ p {
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: normal;
-  letter-spacing: 0.3em;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
 }
 
 h2 {
-  font-size: 1.06rem;
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: normal;
+}
+
+.btn {
+  display: inline-block;
+  padding: 4px 10px 6px 10px;
+  border-radius: 5px;
+}
+
+.btn-green {
+  background-color: #6dbb45;
+  color: #fff;
 }
 
 body {
@@ -381,7 +405,6 @@ header {
 }
 
 header h1 {
-  margin-top: 0;
   text-align: center;
 }
 
@@ -389,7 +412,18 @@ header h1 {
   padding-top: 90px;
 }
 
+@media (min-width: 901px) {
+  .main-article .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 815px;
+  }
+}
+
 .form-title {
+  margin-top: 1rem;
+  margin-bottom: 0.63rem;
+  padding-left: 0.63rem;
   font-size: 1rem;
   font-weight: normal;
   color: #9c9c9c;
@@ -398,6 +432,27 @@ header h1 {
 .fa-question-circle {
   vertical-align: middle;
   color: #6dbb45;
+}
+
+.ask-box {
+  margin-bottom: 1rem;
+}
+
+.question-box {
+  position: relative;
+  padding: 14px;
+  background-color: #fff;
+  border: 1px solid #d8d7d7;
+  border-top: none;
+}
+
+.question-box:first-of-type {
+  border-top: 1px solid #d8d7d7;
+}
+
+.question-box h3 {
+  font-size: 0.88rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=../maps/main.css.map */
