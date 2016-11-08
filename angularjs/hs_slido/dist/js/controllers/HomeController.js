@@ -6,12 +6,17 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 
 		$scope.addSuggestion = function(){
 
-			if( !$scope.name || $scope.name === "" ){
+			// 질문을 적지 않았을 때 
+			if( !$scope.title || $scope.title === ""){
+				alert("Please write your question.");
+				return;
+			} 
+
+			// 이름을 적지 않았을 때 기본이름 세팅 
+			if( (!$scope.name || $scope.name === "") && ($scope.title || !$scope.title === "") ){
 				$scope.name = "Anonymous";
 			}
-			if( !$scope.title || $scope.title === "" ){
-				return;
-			}
+
 			$scope.posts.push({
 				name: $scope.name,
 				title: $scope.title,
