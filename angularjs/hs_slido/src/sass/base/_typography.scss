@@ -1,0 +1,38 @@
+$base-font: 'Open Sans', sans-serif;
+
+$base-font-size: 0.88rem;
+$base-line-height: 1.5;
+
+body {
+	font-family: $base-font;
+	font-size: $base-font-size;
+	color: $font-base-color;
+}
+
+p {
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+}
+
+h1 {
+	font-size: 1.7rem;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-size: 1.4rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: normal;
+}
