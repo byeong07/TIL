@@ -1,10 +1,24 @@
 <form ng-submit="addSuggestion()">
   <h3 class="form-title">Ask the speaker</h3>
   <div class="question-box ask-box">
-    <label for="username"><span class="fa fa-user" aria-hidden="true"></span><span class="blind">name</span></label>
-    <input type="text" id="username" placeholder="Add your name" ng-model="name">
-    <label for="question"><span class="fa fa-question-circle" aria-hidden="true"></span><span class="blind">question</span></label>
-    <input type="text" id="question" placeholder="Type your question" ng-model="title">
+    <table>
+      <tr>
+        <td>
+          <label for="username"><span class="fa fa-user" aria-hidden="true"></span><span class="blind">name</span></label>
+        </td>
+        <td>
+          <input type="text" id="username" placeholder="Add your name" ng-model="name">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="question"><span class="fa fa-question-circle" aria-hidden="true"></span><span class="blind">question</span></label>
+        </td>
+        <td>
+          <input type="text" id="question" placeholder="Type your question" ng-model="title">
+        </td>
+      </tr>
+    </table>
     <button type="submit" class="btn btn-green">Sand</button>
   </div>
 </form>

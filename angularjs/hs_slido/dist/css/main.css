@@ -395,6 +395,7 @@ body {
 
 header {
   position: fixed;
+  z-index: 1000;
   top: 0;
   width: 100%;
   height: 90px;
@@ -438,8 +439,25 @@ header h1 {
   margin-bottom: 1rem;
 }
 
+.ask-box table {
+  width: 100%;
+}
+
+.ask-box td:first-child {
+  text-align: center;
+}
+
+.ask-box td:last-child {
+  width: 95%;
+}
+
+.ask-box td:last-child input {
+  width: 100%;
+}
+
 .question-box {
   position: relative;
+  width: 100%;
   padding: 14px;
   background-color: #fff;
   border: 1px solid #d8d7d7;
