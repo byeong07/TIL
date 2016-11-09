@@ -1,21 +1,33 @@
-<div class="question-box">
+<div class="boxes sub-page">
   <h3>{{ post.name }}</h3>
   <h4>{{ post.title }}</h4>
-  <ul ng-repeat="ct in post.comments | orderBy: '-upvotes'">
-    <li>{{ ct.body }}
-      <p>
-        <button type="button" ng-click="upVote(ct)">Upvote</button>
+  <ul class="comment-box" ng-repeat="ct in post.comments | orderBy: '-upvotes'">
+    <li>
+      {{ ct.body }}
+      <span class="upright">
         {{ ct.upvotes }}
-      </p>
+        <button type="button" ng-click="upVote(ct)"><span class="fa fa-thumbs-o-up" aria-hidden="true"></span><span class="blind">Upvotes</span></button>
+      </span>
     </li>
   </ul>
+
+  <form ng-submit="addComment()">
+    <div class="ask-box">
+      <h3 class="form-title">Your comment</h3>
+      <table>
+        <tr>
+          <td>
+            <label for="commentadd"><span class="fa fa-commenting-o" aria-hidden="true"></span><span class="blind">comment</span></label>
+          </td>
+          <td>
+            <input type="text" id="commentadd" placeholder="Your comment here" ng-model="commentinput">
+          </td>
+        </tr>
+      </table>
+      <div class="align-right">
+        <button type="submit" class="btn btn-green">Comment</button>
+      </div>
+    </div>
+  </form>
 </div>
 
-<form ng-submit="addComment()">
-  <h3 class="form-title">Submit your comment</h3>
-  <div>
-    <label for="commentadd">Comment</label>
-    <input type="text" id="commentadd" placeholder="Your comment here" ng-model="commentinput">
-  </div>
-  <button type="submit">Submit</button>
-</form>

@@ -18,6 +18,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 			}
 
 			$scope.posts.push({
+				num: $scope.posts.length, // orderBy시 순서잡기위함 
 				name: $scope.name,
 				title: $scope.title,
 				upvotes: 0,

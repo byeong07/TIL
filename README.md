@@ -3,6 +3,34 @@
 Today I Learned~!! 열공모드~*
 ******************************************************
 
+## PortFolio_sli.do
+[Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/TIL/angularjs/hs_slido/dist/index.html)
+
+#### 프로젝트 주제 
+
+- 강의 중 실시간으로 질문, 답변을 받는 서비스인 sli.do 사이트 + 적절한 기능 보완 <br>
+- 실제 서비스 예) [sli.do](https://app.sli.do/event/qao1egje/ask)
+
+#### Front-End 개발 기술
+
+- AngularJS, JSON
+- HTML, SASS to CSS 
+- Gulp
+
+#### 프로젝트 고려사항
+
+- 적절한 기능 추가<br>
+답변(comment) 기능 추가
+
+- 반응형 웹 <br>
+미디어쿼리 기술을 사용하여 다양한 기기에서 적합하게 보이도록 하였습니다.
+
+- 추후 추가 예정 <br>
+하이브리드 웹앱 : 개발 후 아이오닉 기술을 사용하여 모바일 앱으로도 구현할 예정입니다.<br>
+firebase나 back-end 기술을 사용하여 실제 데이터를 사용하고 싶습니다. 
+
+
+
 ## AngularJS
 
 ### 1. First-app : This Month's Bestsellers App
