@@ -505,6 +505,10 @@ header h1 {
   padding: 14px;
 }
 
+.question-box > a:hover {
+  background: #FFFEDF;
+}
+
 .question-box .upright {
   position: absolute;
   top: 14px;
@@ -533,7 +537,7 @@ header h1 {
 .comment-box {
   margin: 0;
   padding: 14px;
-  background-color: #ececec;
+  background-color: rgba(236, 236, 236, 0.3);
   border-bottom: 2px dotted #d8d7d7;
 }
 
