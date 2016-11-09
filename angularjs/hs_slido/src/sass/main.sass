@@ -72,7 +72,7 @@ header
 			text-align: center
 			vertical-align: top
 		&:last-child
-			background: fade-out(#ececec, 0.7)
+			background: $light-gray-color
 			input, textarea
 				// resize: none
 				width: 100%
@@ -95,7 +95,7 @@ header
 		height: 100%
 		padding: $base-padding
 		&:hover
-			background: 
+			background: $box-hover-color
 	.upright
 		position: absolute
 		top: $base-padding
@@ -119,7 +119,7 @@ header
 .comment-box
 	margin: 0
 	padding: $base-padding
-	background-color: $base-bg
+	background-color: $light-gray-color
 	border-bottom: 2px dotted $base-line
 	&:last-of-type
 		border-bottom: none
@@ -133,4 +133,4 @@ header
 		right: 0
 		.fa
 			@extend %small
-
+		
