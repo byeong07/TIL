@@ -377,6 +377,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+.question-box .upright, .question-box .upright .fa, .comment-box .upright, .comment-box .upright .fa {
+  font-size: 0.75rem;
+  color: #216796;
+}
+
 .btn {
   display: inline-block;
   padding: 4px 10px 6px 10px;
@@ -496,12 +501,6 @@ header h1 {
   position: absolute;
   top: 14px;
   right: 14px;
-  font-size: 0.75rem;
-  color: #216796;
-}
-
-.question-box .upright .fa {
-  color: #216796;
 }
 
 .question-box .upright > span + span::before {
@@ -511,14 +510,30 @@ header h1 {
   color: #9c9c9c;
 }
 
+.sub-page {
+  margin-top: 14px;
+}
+
+.sub-page h4 {
+  margin-bottom: 14px;
+}
+
+.sub-page .form-title {
+  padding-left: 0;
+}
+
 .comment-box {
   margin: 0;
   padding: 14px;
-  border-bottom: 1px dotted #d8d7d7;
+  background-color: #ececec;
+  border-bottom: 2px dotted #d8d7d7;
+}
+
+.comment-box:last-of-type {
+  border-bottom: none;
 }
 
 .comment-box .upright {
-  position: static;
   float: right;
 }
 

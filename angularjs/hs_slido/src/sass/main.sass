@@ -93,20 +93,32 @@ header
 		position: absolute
 		top: $base-padding
 		right: $base-padding
-		font-size: $small-font
-		color: $main-color
+		@extend %small
 		.fa
-			color: $main-color
+			@extend %small
 		> span+span::before
 			display: inline-block
 			content: '|'
 			padding: 0 5px
 			color: $gray-color
 
+.sub-page
+	margin-top: $base-padding
+	h4
+		margin-bottom: $base-padding
+	.form-title
+		padding-left: 0
+
 .comment-box
 	margin: 0
 	padding: $base-padding
-	border-bottom: 1px dotted $base-line
+	background-color: $base-bg
+	border-bottom: 2px dotted $base-line
+	&:last-of-type
+		border-bottom: none
 	.upright
-		position: static
+		@extend %small
 		float: right
+		.fa
+			@extend %small
+
