@@ -3,6 +3,16 @@
 Today I Learned~!! 열공모드~*
 ******************************************************
 
+## [『 PortFolio_sli.do 개발 중 』](https://sharryhong.github.io/TIL/angularjs/hs_slido/dist/index.html)
+강의 중 실시간으로 질문, 답변을 받는 서비스 sli.do 사이트 <br>
+답변(comment) 기능 추가<br>
+실제 서비스 예) [sli.do](https://app.sli.do/event/qao1egje/ask)
+
+#### Front-End 개발 기술
+- AngularJS, JSON
+- HTML, SASS to CSS 
+- Gulp
+
 ## AngularJS
 
 ### 1. First-app : This Month's Bestsellers App
