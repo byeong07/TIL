@@ -96,7 +96,6 @@ puts "Your name is #{first_name} #{last_name}!"  // 출력
 - `gets` : Ruby method. input 받는 메소드
 - `chomp` : 적지 않으면 줄바꿈되고, 적으면 줄바꿈 되지 않는다. 
 
-##### string interpolation 문자 보간법 : 문자 + 변수 
-- `#{variable}`
+- `#{variable}` : string interpolation 문자 보간법. 문자 + 변수 
 
 - `!` : first_name.capitalize! 의 경우 !를 붙이면 결과값이 first_name 변수로 
