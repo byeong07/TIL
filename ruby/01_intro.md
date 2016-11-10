@@ -78,3 +78,25 @@ I don't need any # symbols.
 #### Naming Conventions 네이밍 규칙 
 - 소문자로 시작한다. 
 - `_`를 사용한다. 
+
+## 실습 : 사용자에게 이름 입력 받아 출력하기 
+
+```
+print "What's your first name?" // 메시지 표시 
+first_name = gets.chomp // input 받기 
+first_name.capitalize! // 첫문자만 대문자 
+
+print "What's your last name?"
+last_name = gets.chomp
+last_name.upcase // 모든문자 대문자
+
+puts "Your name is #{first_name} #{last_name}!"  // 출력 
+```
+
+- `gets` : Ruby method. input 받는 메소드
+- `chomp` : 적지 않으면 줄바꿈되고, 적으면 줄바꿈 되지 않는다. 
+
+##### string interpolation 문자 보간법 : 문자 + 변수 
+- `#{variable}`
+
+- `!` : first_name.capitalize! 의 경우 !를 붙이면 결과값이 first_name 변수로 
