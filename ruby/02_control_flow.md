@@ -36,11 +36,11 @@ I'm writing Ruby programs!
 
 ```
 print "Thtring, pleathe!: "
-user_input = gets.chomp // input받기 
-user_input.downcase! // 소문자로 변환하여 저장 
+user_input = gets.chomp 			# input받기 
+user_input.downcase! 				# 소문자로 변환하여 저장 
 
-if user_input.include? "s" // "s" 가 있으면 true 
-  user_input.gsub!(/s/, "th") // s를 th로 바꾼다.
+if user_input.include? "s" 			# "s" 가 있으면 true 
+  user_input.gsub!(/s/, "th") 		# s를 th로 바꾼다.
 else
   puts "Nothing to do here!"
 end
