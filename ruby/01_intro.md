@@ -87,7 +87,7 @@ first_name = gets.chomp // input 받기
 first_name.capitalize! // 첫문자만 대문자 
 
 print "What's your last name?"
-last_name = gets.chomp
+last_name = gets.chomp!
 last_name.upcase // 모든문자 대문자
 
 puts "Your name is #{first_name} #{last_name}!"  // 출력 
@@ -98,4 +98,4 @@ puts "Your name is #{first_name} #{last_name}!"  // 출력
 
 - `#{variable}` : string interpolation 문자 보간법. 문자 + 변수 
 
-- `!` : first_name.capitalize! 의 경우 !를 붙이면 결과값이 first_name 변수로 
+- `!` : first_name.capitalize! 의 경우 !를 붙이면 결과값이 first_name 변수 값으로 
