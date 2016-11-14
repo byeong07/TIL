@@ -25,7 +25,14 @@
   </div>
 </form>
 
-<div class="boxes question-box" ng-repeat="post in posts | orderBy:'-upvotes'">
+<nav class="order-menu">
+  <ul>
+    <li class="order-menu01 on"><a ng-click="tab(1)">Popular</a></li>
+    <li class="order-menu02"><a ng-click="tab(2)">Recent</a></li>
+  </ul>  
+</nav>
+
+<div class="boxes question-box" ng-repeat="post in posts | orderBy:sort:true">
   <a href="#/suggestion/{{post.num}}">
     <h3>{{ post.name }}</h3>
     <h4>{{ post.title }}</h4>
