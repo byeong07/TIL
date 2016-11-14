@@ -43,6 +43,20 @@
 					"upvotes": 3
 				}
 			]
+		},
+		{
+			"num": 3,
+			"name": "Angle",
+			"title": "안녕하세요. 좋은 강의 감사합니다.", 
+			"upvotes": 0, 
+			"comments": []
+		},
+		{
+			"num": 4,
+			"name": "Anonymous",
+			"title": "다음에 계획하고 있는 강의가 있나요?", 
+			"upvotes": 0, 
+			"comments": []
 		}
 	]
 }
