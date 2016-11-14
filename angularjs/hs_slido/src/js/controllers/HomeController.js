@@ -29,11 +29,31 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 			$scope.title = '';
 		};
 
+		// 좋아요 버튼 눌렀을 때
 		$scope.upVote = function(post){
 			post.upvotes += 1; 
 		};
+
+		// item 매개변수에 따라 orderBy
+		$scope.sort = function(item) {
+			// 나중에 date넣을 것 대비 
+		// if ( $scope.orderProp == 'date') {
+		// 	return new Date(item.date);
+		// }
+			// sort 메소드 실행시 orderProp값 반환 
+			return item[$scope.orderProp];
+		}
+		// 기본 orderBy 값 upvotes
+		$scope.orderProp='upvotes';
+		// 메뉴 클릭시 orderBy될 값 정하기
+		$scope.tab = function(tabIndex) {
+			if (tabIndex == 1){
+				$scope.orderProp='upvotes';
+			}
+			if (tabIndex == 2){
+				$scope.orderProp = 'num';
+			}
+		};
 	});
 
-	
-	
 }]);
