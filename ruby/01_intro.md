@@ -26,7 +26,7 @@ Back-end 개념 이해를 위해 [코드카데미](https://www.codecademy.com) �
 - Subtraction (-)
 - Multiplication (*)
 - Division (/)
-- Exponentiation (**)  `2**3 은 2의 3승 = 2*2*2 = 8`
+- Exponentiation (`**`)  `2**3 은 2의 3승 = 2*2*2 = 8`
 - Modulo (%)
 
 #### 'puts' and 'print'
