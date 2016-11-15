@@ -1,0 +1,62 @@
+{
+	"posts": [
+		{
+			"num": 0,
+			"name": "hong", 
+			"title": "Full-Stack Developer가 되기 위해 필요한 역량은 무엇인가요?", 
+			"upvotes": 11, 
+			"comments": [
+				{
+					"body": "서버, 네트워크와 호스팅 환경, 데이터 모델링, 비지니스 로직, API 레이어 / 액션 레이어 / MVC, 유저 인터페이스...",
+					"upvotes": 1
+				},
+				{
+					"body": "good2-1",
+					"upvotes": 3
+				}
+			]
+		},
+		{
+			"num": 1,
+			"name": "kim",
+			"title": "AngularJS and Firebase를 같이 써보고 싶은데 도움되는 사이트가 있을까요?", 
+			"upvotes": 8, 
+			"comments": [
+				{
+					"body": "good2",
+					"upvotes": 2
+				}
+			]
+		},
+		{
+			"num": 2,
+			"name": "Anonymous",
+			"title": "Front-End 개발자 신입에게 바라는 것들은?", 
+			"upvotes": 12, 
+			"comments": [
+				{
+					"body": "디자이너와 백엔드와의 협업",
+					"upvotes": 1
+				},
+				{
+					"body": "HTML, CSS, JavaScipt를 기본으로.. 프레임워크도 다룰 수 있으면 합니다.",
+					"upvotes": 3
+				}
+			]
+		},
+		{
+			"num": 3,
+			"name": "Angle",
+			"title": "안녕하세요. 좋은 강의 감사합니다.", 
+			"upvotes": 0, 
+			"comments": []
+		},
+		{
+			"num": 4,
+			"name": "Anonymous",
+			"title": "다음에 계획하고 있는 강의가 있나요?", 
+			"upvotes": 0, 
+			"comments": []
+		}
+	]
+}
