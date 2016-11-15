@@ -47,6 +47,29 @@ header
 	vertical-align: middle
 	color: $sub-color
 
+.order-menu
+	color: $gray-color
+	ul 
+		%clearfix
+		margin: 0 $base-padding
+		padding: 0
+	li
+		float: left
+		a 
+			display: inline-block
+			padding: 5px 6px 8px 6px
+			cursor: pointer
+
+	.on
+		color: $sky-color
+		font-weight: bold
+		&:after
+			content: ''
+			display: block
+			width: 100%
+			height: 3px
+			background: $sky-color
+
 .boxes
 	width: 100%
 	padding: $base-padding
