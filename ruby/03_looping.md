@@ -26,7 +26,6 @@ end
 counter = 1
 until counter > 10
   puts counter
-  # Add code to update 'counter' here!
   counter += 1
 end
 ```
@@ -70,9 +69,67 @@ end
 ```
 i = 20
 loop do
-  i -= 1   					# 첫줄에 해줘야 무한루프에 안빠지는 것 같다. 
+  i -= 1   					    # 첫줄에 해줘야 무한루프에 안빠지는 것 같다. 
   next if i % 2 == 1		# 홀수는 skip한다. 
   print i
   break if i <= 0
+end
+```
+
+### .each 반복 메소드
+
+> `object.each { |item| # Do something }` <br>
+> `object.each do |item| # Do something end`
+
+```
+array = [1,2,3,4,5]
+
+array.each do |x|
+  x += 10
+  print "#{x}"          # 각 배열의 값을 10씩 곱한 것을 출력
+end
+```
+
+### .times 반복 메소드
+
+- 지정된 횟수만큼 반복 수행
+- `10.times { print "Chunky bacon!" }` : Chunky bacon! 10번 출력 
+
+### 실습 : 1 ~ 50까지 숫자 출력 
+
+- while 
+```
+i = 1
+while i <= 50 do
+    print i
+    i += 1
+end
+```
+
+- until
+```
+i = 1
+until i > 50 do
+    print i
+    i += 1
+end
+```
+
+- for
+```
+for i in 1..50
+    print i
+end
+```
+
+### 실습 : 30번 출력하기 
+
+- loop
+```
+i = 0
+loop do
+    i += 1
+    print "Ruby!"
+    break if i == 30
 end
 ```
