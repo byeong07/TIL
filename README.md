@@ -13,7 +13,7 @@ Today I Learned~!! 열공모드~*
 
 #### Front-End 개발 기술
 
-- AngularJS, JSON
+- AngularJS, JSON, JavaScript
 - HTML, SASS to CSS 
 - Gulp
 
