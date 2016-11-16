@@ -48,10 +48,24 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 		// 메뉴 클릭시 orderBy될 값 정하기
 		$scope.tab = function(tabIndex) {
 			if (tabIndex == 1){
+				$scope.addClass(tabIndex);
 				$scope.orderProp='upvotes';
 			}
 			if (tabIndex == 2){
+				$scope.addClass(tabIndex);
 				$scope.orderProp = 'num';
+			}
+		};
+		// 메뉴 클릭시 class='on'붙이기
+		$scope.addClass = function(index){
+			$scope.orderMenuList = document.querySelectorAll('.order-menu li');
+			if($scope.orderMenuList[index-1].classList.contains("on")){
+				return;
+			} else {
+				for(i=0; i<$scope.orderMenuList.length; i++){
+					$scope.orderMenuList[i].classList.remove("on");
+				}
+				$scope.orderMenuList[index-1].classList.add("on");
 			}
 		};
 	});
