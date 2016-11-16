@@ -95,7 +95,7 @@ end
 - 지정된 횟수만큼 반복 수행
 - `10.times { print "Chunky bacon!" }` : Chunky bacon! 10번 출력 
 
-### 실습 : 1 ~ 50까지 숫자 출력 
+#### 실습 : 1 ~ 50까지 숫자 출력 
 
 - while 
 ```
@@ -122,7 +122,7 @@ for i in 1..50
 end
 ```
 
-### 실습 : 30번 출력하기 
+#### 실습 : 30번 출력하기 
 
 - loop
 ```
@@ -131,5 +131,29 @@ loop do
     i += 1
     print "Ruby!"
     break if i == 30
+end
+```
+
+- times
+```
+30.times { print "Ruby!" }
+```
+
+#### 실습 : string의 일부 문자를 바꾸기 
+```
+redactWord = "REDACTED"
+puts "text"
+text = gets.chomp           # 처음입력받은 문자
+puts "redact"
+redact = gets.chomp         # 두번째 입력받은 문자
+
+words = text.split(" ")     # 처음 입력받은 문자 간격이 있으면 배열 값으로 받는다. 
+
+words.each do |word|        # 배열값만큼 반복 
+    if word.downcase == redact.downcase       # 배열값과 두번째 입력받은 문자가 같다면 (대소문자 구분하지 않고)
+        print "#{redactWord} "   # 출력 
+    else
+        print word + " "
+    end
 end
 ```
