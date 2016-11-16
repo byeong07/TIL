@@ -1,15 +1,6 @@
 <div class="boxes sub-page">
   <h3>{{ post.name }}</h3>
   <h4>{{ post.title }}</h4>
-  <ul class="comment-box" ng-repeat="ct in post.comments | orderBy: '-upvotes'">
-    <li>
-      {{ ct.body }}
-      <span class="upright">
-        {{ ct.upvotes }}
-        <button type="button" ng-click="upVote(ct)"><span class="fa fa-thumbs-o-up" aria-hidden="true"></span><span class="blind">Upvotes</span></button>
-      </span>
-    </li>
-  </ul>
 
   <form ng-submit="addComment()">
     <div class="ask-box">
@@ -29,5 +20,17 @@
       </div>
     </div>
   </form>
+  
+  <ul class="comment-box" ng-repeat="ct in post.comments | orderBy: '-upvotes'">
+    <li>
+      {{ ct.body }}
+      <span class="upright">
+        {{ ct.upvotes }}
+        <button type="button" ng-click="upVote(ct)"><span class="fa fa-thumbs-o-up" aria-hidden="true"></span><span class="blind">Upvotes</span></button>
+      </span>
+    </li>
+  </ul>
+
+  
 </div>
 
