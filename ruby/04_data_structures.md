@@ -52,4 +52,53 @@ secret_identities.each do |secretname, realname|
 end
 ```
 
-### 실습 : 막대그래프. 단어가 몇 번 나오는지 나타내는 프로그램
+### 실습 : 막대그래프. 입력한 단어가 몇 번 나오는지 나타내는 프로그램
+
+1. 입력받기 
+
+ ```
+ puts "input your text"
+ text = gets.chomp
+ ```
+
+2. 입력받은 값을 공백기준으로 나눠 배열로 저장하기 
+
+ ```
+ words = text.split(" ")
+ ```
+
+3. hash 데이터타입으로 counting 할 변수 정의 
+
+ ```
+ frequencies = Hash.new(0)      #(0)은 default vlaue = 0 이라는 뜻 
+ ``` 
+
+4. frequencies 값을 활용하여, 같은 값일 경우 1 더하기 
+
+ ```
+ words.each do |x|            # x는 입력받은(변수words) 배열의 각 값 
+    frequencies[x] += 1       # frequencies = {"입력받은 배열의 각 값": "value + 1"}
+ end
+ ```
+
+5. 많은 순서대로 정렬하기 
+
+ ```
+ frequencies = frequencies.sort_by do |x, count|
+    count
+ end
+ frequencies.reverse!
+ ```
+ - `.sort_by`     : 정렬 메소드 
+ - `|x, count|`   : frequencies 값을 x, count로 받아서 
+ - `count`        : count 값을 기준으로 정렬한다. 
+ - `.reverse!`    : 많은 순서여야 하므로 반대 
+
+6. 출력하기 
+
+ ```
+  frequencies.each do |word, count|
+    puts word + " " + count.to_s
+ end
+ ```
+ - `.to_s`      : 숫자 -> 문자 
