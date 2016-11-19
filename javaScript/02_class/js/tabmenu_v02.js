@@ -4,7 +4,8 @@
 	'use strict';
 	
 	// 인스턴스 생성 	
-	var tabTab = new TabMenu();
+	var tabTab1 = new TabMenu();
+	var tabTab2 = new TabMenu();
 
 	// 클래스 생성, 프로퍼티 생성 
 	function TabMenu() {
@@ -13,9 +14,10 @@
 		this.$selectMenu = null;
 	}
 	// 메서드 생성, 요소 초기화  
-	TabMenu.prototype.init =function(){
-		this.$tab = $('#tabMenu1');
+	TabMenu.prototype.init =function(el){
+		this.$tab = $(el);
 		this.$tabMenus = this.$tab.find('li');
+		console.log(this);
 	}
 
 	TabMenu.prototype.initEvent = function(){
@@ -33,7 +35,10 @@
 		this.$selectMenu.addClass('select');
 	}
 
-	tabTab.init();
-	tabTab.initEvent();
+	tabTab1.init('#tabMenu1');
+	tabTab1.initEvent();
+
+	tabTab2.init('#tabMenu2');
+	tabTab2.initEvent();
 
 })(this, this.jQuery);
