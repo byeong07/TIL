@@ -7,7 +7,7 @@
 	var $tab = null;
 	var $tabMenus = null;
 	var $selectMenu = null;
-
+	// 초기화 
 	function init(){
 		$tab = $('#tabMenu1');
 		$tabMenus = $tab.find('li');
@@ -28,7 +28,7 @@
 	}
 
 	// 함수 실행
-	init();
-	initEvent();
+	$(init);		// $(document).ready(init);
+	$(initEvent);
 
 })(this, this.jQuery);
