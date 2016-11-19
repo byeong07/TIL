@@ -139,7 +139,7 @@ TabMenu.prototype.init =function(el){
 }
 
 TabMenu.prototype.initEvent = function(){
-	var objThis = this;
+	var objThis = this;		// 아래에 설명 추가 
 	this.$tabMenus.on("click", function(){
 		objThis.setSelectMenu($(this));
 	});
@@ -175,9 +175,20 @@ tabTab2.initEvent();
 		initEvent: function()
 		setSelectMenu: function($thisMenu)
 		__proto__: Object
-		
+
  ```
 
 - 코드 재사용
 - 메서드 공유 기능 : 모든 인스턴스는 .prototype에 만들어져 있는 메서드를 공유해서 사용한다. 
 - 상속 기능 : 자바스크립트에서는 prototype을 이용해 상속을 구현한다. 
+
+```
+TabMenu.prototype.initEvent = function(){
+	var objThis = this;
+	this.$tabMenus.on("click", function(){
+		objThis.setSelectMenu($(this));
+	});
+}
+```
+ - 위 코드에서  `this.$tabMenus.on("click",...` 클릭을 하면 `this`가 **클릭한 li요소**로 되어 버린다. <br>
+ 따라서 변수 objThis에 본래의 this를 저장하여 `objThis.setSelectMenu($(this));`로 사용한 것이다. 

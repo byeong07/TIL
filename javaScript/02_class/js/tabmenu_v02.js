@@ -17,12 +17,15 @@
 	TabMenu.prototype.init =function(el){
 		this.$tab = $(el);
 		this.$tabMenus = this.$tab.find('li');
-		console.log(this);
+		// console.log(this);
 	}
 
 	TabMenu.prototype.initEvent = function(){
+		console.log(this);
 		var objThis = this;
 		this.$tabMenus.on("click", function(){
+			console.log(this);
+			console.log(objThis);
 			objThis.setSelectMenu($(this));
 		});
 	}
