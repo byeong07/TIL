@@ -162,9 +162,10 @@ tabTab2.initEvent();
 })(this, this.jQuery);
 ```
 
- - 클릭(이벤트) 전 `this` 는 아래처럼 구성되어 있다. 
+ - 클릭(이벤트) 전 `this` 는 아래처럼 구성되어 있다. (크롬 개발자도구)
+
  ```
-TabMenu
+ TabMenu
 		$selectMenu:null
 		$tab:n.fn.init[1]
 		$tabMenus:n.fn.init[6]
@@ -174,4 +175,9 @@ TabMenu
 		initEvent: function()
 		setSelectMenu: function($thisMenu)
 		__proto__: Object
+		
  ```
+
+- 코드 재사용
+- 메서드 공유 기능 : 모든 인스턴스는 .prototype에 만들어져 있는 메서드를 공유해서 사용한다. 
+- 상속 기능 : 자바스크립트에서는 prototype을 이용해 상속을 구현한다. 
