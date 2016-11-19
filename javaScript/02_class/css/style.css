@@ -1,4 +1,11 @@
+.clearfix::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
 .tab-menu {
+	margin-bottom: 20px;
 	list-style: none;
 	color: #fff;
 	font-weight: bold;
