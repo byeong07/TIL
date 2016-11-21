@@ -57,7 +57,8 @@ puts output
 ```
 # Method
 def capitalize(string) 
-  puts "#{string[0].upcase}#{string[1..-1]}" 	# [1..-1] : 두번째 배열값부터 모두. [1..string.length] 로 해도 된다.  
+  puts "#{string[0].upcase}#{string[1..-1]}" 
+  # [1..-1] : 두번째 배열값부터 모두. [1..string.length] 로 해도 된다.  
 end
 
 capitalize("ryan") 		# prints "Ryan"
