@@ -3,8 +3,9 @@
 Today I Learned~!! 열공모드~*
 ******************************************************
 
-## PortFolio_sli.do
-[Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/TIL/angularjs/hs_slido/src/index.html)
+## [Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/TIL/angularjs/hs_slido/src/index.html)
+
+[![Hong's portfolio - sli.do 서비스](img/slido.jpg)(https://sharryhong.github.io/TIL/angularjs/hs_slido/src/index.html)
 
 #### 프로젝트 주제 
 
