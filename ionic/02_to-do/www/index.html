@@ -35,9 +35,10 @@
   <body ng-app="mytodos">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">My Todos</h1>
-      </ion-header-bar>
+      <ion-nav-bar class="bar-stable">
+        <!-- back button이 필요할 때 나오게 된다. -->
+        <ion-nav-back-button></ion-nav-back-button>
+      </ion-nav-bar>
       <!-- ion-view로 감싼 부분 불러옴 -->
       <ion-nav-view></ion-nav-view>
     </ion-pane>

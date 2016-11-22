@@ -302,7 +302,22 @@
     url: '/edit',
     templateUrl: 'template/edit.html'
   });
+  // 기본적으로 ... #/list로 들어가게 세팅 
+  $urlRouterProvider.otherwise('/list');
 })
 ```
 
-- http://192.168.1.125:8100/#/list 로 들어가면 된다.
+#### 상세페이지에서 back버튼 추가 
+
+- index.html
+```
+<ion-nav-bar class="bar-stable">
+	<!-- back button이 필요할 때 나오게 된다. -->
+	<ion-nav-back-button></ion-nav-back-button>
+</ion-nav-bar>
+```
+
+- 각 페이지에 view-title 추가 
+```
+<ion-view view-title="제목">
+```

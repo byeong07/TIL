@@ -1,8 +1,8 @@
 <!-- ionic에서는 ion-view로 감싸줘야 한다. -->
-<ion-view>
+<ion-view view-title="할일 목록">
   <ion-content ng-controller="ListCtrl">
     <ul class="list">
-      <li class="item" >
+      <li>
         <!-- 클릭시 상세페이지로 이동 -->
         <a href="#/edit" class="item" ng-repeat="todo in todos">
           <h2>{{todo.title}}</h2>
