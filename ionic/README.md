@@ -84,4 +84,109 @@
  - <http://52.78.168.126:8080/api/movie/list/0> // 끝 숫자 : index값 이후의 값 15번씩 던져주는 api
  - JSON파일 형태 
 
-1. $ionic start my-movies blank : 빈 앱 생성하기. 이름은 my-movies
+#### $ionic start my-movies blank : 빈 앱 생성하기. 이름은 my-movies
+
+#### 설치된 폴더에서 www > index.html, app.js 에서 작업 
+
+- 변경시 자동 변경 확인 
+- app.js에 컨트롤러 추가 (테스트)
+```
+.controller('MovieCtrl', function($scope){
+  $scope.movies = [
+    {
+      title: '괴물'
+    },
+    {
+      title: '아가씨'
+    },
+    {
+      title: '호빗'
+    }
+  ];
+})
+```
+
+- html
+```
+<body ng-app="starter" ng-controller="MovieCtrl">
+
+<ion-pane>
+<!-- header-bar -->
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">Ionic Blank Starter</h1>
+  </ion-header-bar>
+  <!-- content : 내용 -->
+  <ion-content>
+    <div ng-repeat="movie in movies">{{ movie.title }}</div>
+  </ion-content>
+</ion-pane>
+</body>
+``` 
+
+#### 실제 데이터 뿌려주기 
+
+```
+.controller('MovieCtrl', function($scope, $http){
+  $scope.movies = [  ];
+  $http.get('http://52.78.168.126:8080/api/movie/list/0')
+    .success(function(response){
+      // 실제 데이터 movieList 중 값만 받아오기 위해 forEach
+      angular.forEach(response.movieList, function(data){
+        console.log(data);
+      })
+    });
+```
+
+- 52.78.168.126:8080 이럴경우 데이터를 못불러온다. 실제기계에서는 되므로 프록시 제거해야한다. 
+
+- ionic.config.json에서 설정한다.
+
+```
+{
+  "name": "my-movies",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api", // 가상의 url
+      "proxyUrl": "http://52.78.168.126:8080/api" // 실제 url
+    }
+  ]
+}
+
+``` 
+
+- ionic 재실행 ($ionic serve)
+
+#### api로 data 15개 뿌려주기 (기본으로 15개를 뿌려주게 된다.)
+
+- ionic css 컴포넌트 참고 <http://ionicframework.com/docs/components/> 
+
+- app.js
+
+```
+.controller('MovieCtrl', function($scope, $http){
+  $scope.movies = [  ];
+  $http.get('/api/movie/list/0')
+    .success(function(response){
+      // 실제 데이터 movieList 중 값만 받아오기 위해 forEach
+      angular.forEach(response.movieList, function(data){
+        $scope.movies.push(data);
+      })
+    });
+})
+```
+
+- html 
+
+```
+<ion-content>
+<div class="list">
+<!-- item-avatar-left : 이미지를 좌측, 동그랗게 아바타 이미지처럼 들어가게함  -->
+  <div class="item item-avatar-left" ng-repeat="movie in movies">
+    <img ng-src="https://cdn3.iconfinder.com/data/icons/multimedia/100/play_movie_3-512.png">
+    <h2>{{movie.title}}</h2>
+    <p>{{movie.director}} {{movie.release_date}}</p>
+  </div>
+</div>
+</ion-content>
+```
