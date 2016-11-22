@@ -1,5 +1,16 @@
-<ion-view view-title="상세보기">
-  <ion-content>
-    내 할일
+<ion-view view-title="할일 입력" >
+  <ion-content ng-controller="EditCtrl">
+    <div class="list">
+      <!-- item-input : mobile input에 적합한 style제공 -->
+      <div class="item item-input">
+        <!-- value="{{todo.title}}" 로 하면 양방향 바인딩은 안된다. -->
+        <!-- ng-model로 하였을 때 양방향 바인딩된다. -->
+        <input type="text" ng-model="todo.title">
+      </div>
+      <div class="item item-input">
+        <textarea rows="5" ng-model="todo.description"></textarea>
+      </div>
+    </div>
+    <ion-checkbox ng-model="todo.complete">완료</ion-checkbox>
   </ion-content>
 </ion-view>

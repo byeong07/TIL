@@ -11,8 +11,9 @@ angular.module('mytodos', ['ionic'])
     templateUrl: 'template/list.html'
   });
 
+  // :todoId  id값 받아오게 추가
   $stateProvider.state('edit', {
-    url: '/edit',
+    url: '/edit/:todoId',
     templateUrl: 'template/edit.html'
   });
   // 기본적으로 ... #/list로 들어가게 세팅 
@@ -20,18 +21,12 @@ angular.module('mytodos', ['ionic'])
 })
 
 .controller('ListCtrl', function($scope){
-  $scope.todos = [
-    {
-      title: 'first',
-      description: 'first todo',
-      complete: false
-    },
-    {
-      title: 'second',
-      description: 'second todo',
-      complete: true
-    }
-  ]
+  $scope.todos = todos;
+})
+
+.controller('EditCtrl', function($scope, $state){
+  // 앞에서 받아온 index저장
+  $scope.todo = getTodo($state.params.todoId);
 })
 
 .run(function($ionicPlatform) {

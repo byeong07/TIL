@@ -2,9 +2,10 @@
 <ion-view view-title="할일 목록">
   <ion-content ng-controller="ListCtrl">
     <ul class="list">
-      <li>
+      <li class="item" ng-repeat="todo in todos">
         <!-- 클릭시 상세페이지로 이동 -->
-        <a href="#/edit" class="item" ng-repeat="todo in todos">
+        <!-- {{todo.Id}} 해당 id(index)로 가기 -->
+        <a href="#/edit/{{todo.id}}" >
           <h2>{{todo.title}}</h2>
           <p>{{todo.description}}, {{todo.complete}}</p>
         </a>
