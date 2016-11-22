@@ -38,17 +38,8 @@
       <ion-header-bar class="bar-stable">
         <h1 class="title">My Todos</h1>
       </ion-header-bar>
-      <ion-content ng-controller="ListCtrl">
-        <ul class="list">
-          <li class="item" >
-            <!-- 클릭시 상세페이지로 이동 -->
-            <a href="#/edit" class="item" ng-repeat="todo in todos">
-              <h2>{{todo.title}}</h2>
-              <p>{{todo.description}}, {{todo.complete}}</p>
-            </a>
-          </li>
-        </ul>
-      </ion-content>
+      <!-- ion-view로 감싼 부분 불러옴 -->
+      <ion-nav-view></ion-nav-view>
     </ion-pane>
   </body>
 </html>

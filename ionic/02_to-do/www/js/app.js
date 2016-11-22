@@ -5,6 +5,20 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('mytodos', ['ionic'])
 
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider.state('list', {
+    url: '/list',
+    templateUrl: 'template/list.html'
+  });
+
+  $stateProvider.state('edit', {
+    url: '/edit',
+    templateUrl: 'template/edit.html'
+  });
+  // 기본적으로 ... #/list로 들어가게 세팅 
+  $urlRouterProvider.otherwise('/list');
+})
+
 .controller('ListCtrl', function($scope){
   $scope.todos = [
     {

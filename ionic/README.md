@@ -287,3 +287,22 @@
 - 드래그로 순서 바꾸기 
 
 #### $ionic start 02_todo blank : 빈 앱 생성하기. 이름은 02_todo
+
+#### ui-router
+- <https://github.com/angular-ui/ui-router>
+
+```
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider.state('list', {
+    url: '/list',
+    templateUrl: 'template/list.html'
+  });
+
+  $stateProvider.state('edit', {
+    url: '/edit',
+    templateUrl: 'template/edit.html'
+  });
+})
+```
+
+- http://192.168.1.125:8100/#/list 로 들어가면 된다.
