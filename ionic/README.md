@@ -26,7 +26,8 @@
 - ionic은 ng-cordova로 지원하는 등 cordova를 이용하는데 다른 프레임워크보다 편리하다. 
 
 ### Ionic Framework 단점 및 이슈 
-- 추후 계속 추가 
+- 안드로이드 4.0~4.3 에서는 느리다. (구형 스마트폰)
+- ios에서는 부드러우나 안드로이드에서는 약간 끊기는 듯한 현상이 있다.
 
 ### 개발환경 설치
 
@@ -190,3 +191,12 @@
 </div>
 </ion-content>
 ```
+
+#### 모바일에서 아래로 스크롤 시 계속 15개씩 추가되게 (무한 스크롤)
+- <http://ionicframework.com/docs/api/directive/ionInfiniteScroll/>
+
+#### 모바일에서 당겼을 때 새로고침
+- <http://ionicframework.com/docs/api/directive/ionRefresher/>
+
+#### ionic사용한 앱 
+- <http://showcase.ionicframework.com/>
