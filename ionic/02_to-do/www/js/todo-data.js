@@ -50,7 +50,7 @@ function createTodo(todo) {
 }
 
 function remove(todoId) {
-  for(var i=0; i<todo.length; i++) {
+  for(var i=0; i<todos.length; i++) {
     if(todos[i].id === todoId) {
       // i는 현재위치. 1개 삭제
       todos.splice(i, 1);
@@ -59,4 +59,13 @@ function remove(todoId) {
       return;
     }
   }
+}
+
+// todo : 움직일 객체
+function move(todo, fromIndex, toIndex) {
+  // 현재 위치 없애기 
+  todos.splice(fromIndex, 1);
+  // 0이면 삭제하지 않는다. 세번째 파라미터를 넣는다. 배열내에서 순서 바뀌는 효과
+  todos.splice(toIndex, 0, todo);
+  saveToStorage();
 }

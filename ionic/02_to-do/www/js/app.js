@@ -34,7 +34,11 @@ angular.module('mytodos', ['ionic'])
 
   $scope.remove = function(todoId){
     remove(todoId);
-  }
+  };
+
+  $scope.move = function(todo, fromIndex, toIndex) {
+    move(todo, fromIndex, toIndex);
+  };
 })
 
 // add todo 관련 컨트롤러
