@@ -81,7 +81,10 @@
  - $ ionic resources --icon		// 기본 아이콘 제공 
  - $ ionic resources --splash  	// 기본 스플래시 이미지 제공 
 
-### 실습 : Movie List App
+#### ionic사용한 앱 
+- <http://showcase.ionicframework.com/>
+
+### 실습 1. Movie List App
 
 - [결과물 바로가기](https://sharryhong.github.io/TIL/)
 
@@ -200,7 +203,10 @@
 - <http://ionicframework.com/docs/api/directive/ionInfiniteScroll/>
 
 ```
+<!-- ng-if="moreDataCanBeLoaded" : true일때만 무한 스크롤 -->
+<!-- distance="1%" : 아래 1% 남았을 때 -->
 <ion-infinite-scroll
+  ng-if="moreDataCanBeLoaded"
   on-infinite="loadMore()"
   distance="1%">
 </ion-infinite-scroll>
@@ -216,5 +222,68 @@
 </ion-refresher>
 ```
 
-#### ionic사용한 앱 
-- <http://showcase.ionicframework.com/>
+- 현재까지 app.js
+```
+.controller('MovieCtrl', function($scope, $http){
+  $scope.movies = [  ];  // 현재 데이터 
+  // 현재 가져온 data의 마지막 배열 값 
+  var lastIdx = 0;
+  // 데이터가 있을 경우 
+  $scope.moreDataCanBeLoaded = true;
+  // 아래로 스크롤할 때. 새로 조회한 데이터 15개를 추가
+
+  function loadList(lastIdx, callback) {
+    // 나중에 앱 개발시 서버개발자와 api불러오는 것 상의 
+    $http.get('/api/movie/list/' + lastIdx)
+    .success(function(response){
+      var movies = []; // 방금 가져온 최신 데이터 
+      // 더이상 가져올 데이터가 없다면 
+      if(response.movieList.length ===0){
+        $scope.moreDataCanBeLoaded = false;
+      }
+      // 실제 데이터 movieList 중 값만 받아오기 위해 forEach
+      angular.forEach(response.movieList, function(data){
+        movies.push(data);
+      });
+      
+      // 데이터 조회가 끝나고 최신 데이터를 넘겨주는 콜백함수 
+      callback(movies);
+    });
+  }
+  // 현재 데이터에 새로운 데이터 15개 추가 
+  $scope.loadMore = function() {
+    // 최초실행시에는 적용되지 않아야 한다.
+    if($scope.movies.length > 0) {
+      lastIdx = $scope.movies[$scope.movies.length - 1].idx;
+    }
+    loadList(lastIdx, function(moreData){
+      // 최신데이터를 $scope.movies 뒤에 붙이기 
+      $scope.movies = $scope.movies.concat(moreData);
+      // 데이터를 불러왔으면 아래 코드가 있어야 무한스크롤에 빠지지 않는다.
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+    });
+  };
+
+  // 위로 당길 때. 최신 데이터로 리플래쉬 (15개)
+  $scope.loadNew = function() {
+    // 최신데이터 불러오기 
+    lastIdx = 0;
+    // 무한스크롤 되게하기 
+    $scope.moreDataCanBeLoaded = true;
+    loadList(lastIdx, function(newData){
+      $scope.movies = newData;
+      // 데이터를 불러왔으면 아래 코드가 있어야한다. 
+      $scope.$broadcast('scroll.refreshComplete');
+    });
+  };
+})
+```
+
+### 실습 2. To-Do List App
+
+- 데이터의 입력, 수정, 삭제 구현
+- 라우팅을 이용한 페이지 전환 
+- 스와이핑시 삭제버튼 나와서 삭제가능 
+- 드래그로 순서 바꾸기 
+
+#### $ionic start 02_todo blank : 빈 앱 생성하기. 이름은 02_todo
