@@ -31,6 +31,10 @@ angular.module('mytodos', ['ionic'])
 // todo list관련 컨트롤러
 .controller('ListCtrl', function($scope){
   $scope.todos = todos;
+
+  $scope.remove = function(todoId){
+    remove(todoId);
+  }
 })
 
 // add todo 관련 컨트롤러

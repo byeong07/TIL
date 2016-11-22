@@ -1,18 +1,24 @@
 <!-- ionic에서는 ion-view로 감싸줘야 한다. -->
 <ion-view view-title="할일 목록">
   <ion-content ng-controller="ListCtrl">
-    <div class="padding">
-      <a href="#/add" class="button button-block button-calm">새로운 할 일</a>
-    </div>
-    <ul class="list">
-      <li class="item" ng-repeat="todo in todos">
-        <!-- 클릭시 상세페이지로 이동 -->
-        <!-- {{todo.Id}} 해당 id(index)로 가기 -->
-        <a href="#/edit/{{todo.id}}" >
+
+    <!-- 스와이핑시 삭제버튼이 나오게 하려면 아래처럼 ionic제공 list, item, button등 적용 -->
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" href="#/edit/{{todo.id}}" ng-repeat="todo in todos">
           <h2>{{todo.title}}</h2>
-          <p>{{todo.description}}, {{todo.complete}}</p>
-        </a>
-      </li>
-    </ul>
+          <p>{{todo.description}}</p>
+          <!-- ng-if="todo.complete" : 값이 true일때만 나타남 -->
+          <span ng-if="todo.complete" class="icon ion-checkmark-circled"></span>
+
+          
+          <!-- icon-left : 버튼 위치 
+          ion-trash-a : 버튼 아이콘  -->
+          <ion-option-button class="button button-assertive icon-left ion-trash-a" ng-click="remove(todo.id)">삭제</ion-option-button>
+      </ion-item>
+    </ion-list>
   </ion-content>
+
+  <div class="bar bar-footer bar-stable">
+    <a href="#/add" class="button button-calm icon-left ion-compose">새로운 할 일</a>
+  </div>
 </ion-view>

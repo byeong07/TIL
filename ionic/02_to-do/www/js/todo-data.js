@@ -48,3 +48,15 @@ function createTodo(todo) {
   todos.push(todo);
   saveToStorage();
 }
+
+function remove(todoId) {
+  for(var i=0; i<todo.length; i++) {
+    if(todos[i].id === todoId) {
+      // i는 현재위치. 1개 삭제
+      todos.splice(i, 1);
+      // 변경사항을 로컬스토리지에 저장
+      saveToStorage();
+      return;
+    }
+  }
+}
