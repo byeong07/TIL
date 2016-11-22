@@ -31,6 +31,7 @@ angular.module('mytodos', ['ionic'])
 // todo list관련 컨트롤러
 .controller('ListCtrl', function($scope){
   $scope.todos = todos;
+  $scope.reorder = false;
 
   $scope.remove = function(todoId){
     remove(todoId);
@@ -38,6 +39,10 @@ angular.module('mytodos', ['ionic'])
 
   $scope.move = function(todo, fromIndex, toIndex) {
     move(todo, fromIndex, toIndex);
+  };
+
+  $scope.toggleReorder = function() {
+    $scope.reorder = !$scope.reorder;
   };
 })
 

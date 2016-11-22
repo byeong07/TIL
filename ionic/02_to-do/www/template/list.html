@@ -1,9 +1,9 @@
 <!-- ionic에서는 ion-view로 감싸줘야 한다. -->
-<ion-view view-title="할일 목록">
-  <ion-content ng-controller="ListCtrl">
+<ion-view view-title="할일 목록" ng-controller="ListCtrl">
+  <ion-content>
 
     <!-- 스와이핑시 삭제버튼이 나오게 하려면 아래처럼 ionic제공 list, item, button등 적용 -->
-    <ion-list>
+    <ion-list show-reorder="reorder">
       <ion-item class="item-remove-animate item-icon-right" href="#/edit/{{todo.id}}" ng-repeat="todo in todos">
           <h2>{{todo.title}}</h2>
           <p>{{todo.description}}</p>
@@ -21,5 +21,6 @@
 
   <div class="bar bar-footer bar-stable">
     <a href="#/add" class="button button-calm icon-left ion-compose">새로운 할 일</a>
+    <button class="button button-assertive icon-left ion-shuffle" ng-click="toggleReorder()">정렬</button>
   </div>
 </ion-view>
