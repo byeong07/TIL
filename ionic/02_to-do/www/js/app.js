@@ -11,19 +11,46 @@ angular.module('mytodos', ['ionic'])
     templateUrl: 'template/list.html'
   });
 
+  // 신규등록하기 : edit.html화면과 구성이 같으므로 쓴다.
+  $stateProvider.state('add', {
+    url: '/add',
+    templateUrl: 'template/edit.html',
+    controller: 'AddCtrl'
+  });
+
   // :todoId  id값 받아오게 추가
   $stateProvider.state('edit', {
     url: '/edit/:todoId',
-    templateUrl: 'template/edit.html'
+    templateUrl: 'template/edit.html',
+    controller: 'EditCtrl'
   });
   // 기본적으로 ... #/list로 들어가게 세팅 
   $urlRouterProvider.otherwise('/list');
 })
 
+// todo list관련 컨트롤러
 .controller('ListCtrl', function($scope){
   $scope.todos = todos;
 })
 
+// add todo 관련 컨트롤러
+.controller('AddCtrl', function($scope, $state){
+  // 기존 값 초기화하기
+  $scope.todo = {
+    id: new Date().getTime().toString(),
+    title: '',
+    description: '',
+    complete: false
+  };
+
+  // 저장버튼 눌렀을 때 
+  $scope.save = function() {
+    createTodo($scope.todo);
+    $state.go('list'); // 해당 화면으로 이동하기
+  };
+})
+
+// todo 상세페이지 - 할일 입력 관련 컨트롤러 
 .controller('EditCtrl', function($scope, $state){
   // 앞에서 받아온 index저장
   // 우선 데이터바인딩이 무조건되지 않게하기 위해 copy한다.(저장버튼이 눌렸을때만 반영되게 하기위해)

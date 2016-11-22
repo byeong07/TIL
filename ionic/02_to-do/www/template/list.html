@@ -1,6 +1,9 @@
 <!-- ionic에서는 ion-view로 감싸줘야 한다. -->
 <ion-view view-title="할일 목록">
   <ion-content ng-controller="ListCtrl">
+    <div class="padding">
+      <a href="#/add" class="button button-block button-calm">새로운 할 일</a>
+    </div>
     <ul class="list">
       <li class="item" ng-repeat="todo in todos">
         <!-- 클릭시 상세페이지로 이동 -->
