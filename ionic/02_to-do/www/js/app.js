@@ -26,7 +26,14 @@ angular.module('mytodos', ['ionic'])
 
 .controller('EditCtrl', function($scope, $state){
   // 앞에서 받아온 index저장
-  $scope.todo = getTodo($state.params.todoId);
+  // 우선 데이터바인딩이 무조건되지 않게하기 위해 copy한다.(저장버튼이 눌렸을때만 반영되게 하기위해)
+  $scope.todo = angular.copy(getTodo($state.params.todoId));
+
+  // 저장버튼 눌렀을 때 
+  $scope.save = function() {
+    updateTodo($scope.todo);
+    $state.go('list'); // 해당 화면으로 이동하기
+  };
 })
 
 .run(function($ionicPlatform) {

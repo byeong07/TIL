@@ -28,3 +28,13 @@ function getTodo(todoId) {
   }
   return undefined;
 }
+
+// 하나의 todo객체를 넘기면 반영하는 함순
+function updateTodo(todo) {
+  for(var i=0; i<todos.length; i++) {
+    if(todos[i].id === todo.id) {
+      todos[i] = todo;
+      return;
+    }
+  }
+}
