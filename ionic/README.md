@@ -28,6 +28,7 @@
 ### Ionic Framework 단점 및 이슈 
 - 안드로이드 4.0~4.3 에서는 느리다. (구형 스마트폰)
 - ios에서는 부드러우나 안드로이드에서는 약간 끊기는 듯한 현상이 있다.
+- 안드로이드에서는 애뮬레이터가 느려서 실제 폰에서 테스트를 많이한다. 기기가 연결되어있으면 $ ionic run android 
 
 ### 개발환경 설치
 
@@ -81,6 +82,9 @@
  - $ ionic resources --splash  	// 기본 스플래시 이미지 제공 
 
 ### 실습 : Movie List App
+
+- [결과물 바로가기](https://sharryhong.github.io/TIL/)
+
 - REST API를 이용한 영화 개봉작 목록 조회 
  - <http://52.78.168.126:8080/api/movie/list/0> // 끝 숫자 : index값 이후의 값 15번씩 던져주는 api
  - JSON파일 형태 
@@ -195,8 +199,22 @@
 #### 모바일에서 아래로 스크롤 시 계속 15개씩 추가되게 (무한 스크롤)
 - <http://ionicframework.com/docs/api/directive/ionInfiniteScroll/>
 
-#### 모바일에서 당겼을 때 새로고침
+```
+<ion-infinite-scroll
+  on-infinite="loadMore()"
+  distance="1%">
+</ion-infinite-scroll>
+```
+
+#### 모바일에서 (위로)당겼을 때 새로고침
 - <http://ionicframework.com/docs/api/directive/ionRefresher/>
+
+```
+<ion-refresher
+  pulling-text="당겨서 새로 고침"
+  on-refresh="loadNew()">
+</ion-refresher>
+```
 
 #### ionic사용한 앱 
 - <http://showcase.ionicframework.com/>

@@ -41,14 +41,29 @@
       </ion-header-bar>
       <!-- content : 내용 -->
       <ion-content>
+        <!-- 당겨서 새로 고침 -->
+        <ion-refresher
+          pulling-text="당겨서 새로 고침"
+          on-refresh="loadNew()">
+        </ion-refresher>
+
         <div class="list">
         <!-- item-avatar-left : 이미지를 좌측, 동그랗게 아바타 이미지처럼 들어가게함  -->
-          <div class="item item-avatar-left" ng-repeat="movie in movies">
-            <img ng-src="https://cdn3.iconfinder.com/data/icons/multimedia/100/play_movie_3-512.png">
-            <h2>{{movie.title}}</h2>
-            <p>{{movie.director}} {{movie.release_date}}</p>
-          </div>
+          <ul ng-repeat="movie in movies">
+            <li class="item item-avatar-left">
+              <img ng-src="https://cdn3.iconfinder.com/data/icons/multimedia/100/play_movie_3-512.png">
+              <h2>{{movie.title}}</h2>
+              <p>{{movie.director}} {{movie.release_date}}</p>
+            </li>
+          </ul>
         </div>
+        <!-- 아래로 스크롤 시 무한 스크롤 -->
+        <!-- ng-if="moreDataCanBeLoaded" : true일때만 무한 스크롤 -->
+        <ion-infinite-scroll
+          ng-if="moreDataCanBeLoaded"
+          on-infinite="loadMore()"
+          distance="1%">
+        </ion-infinite-scroll>
       </ion-content>
     </ion-pane>
   </body>
