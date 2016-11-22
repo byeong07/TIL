@@ -1,23 +1,27 @@
-var todos = [
-  {
-    id: '1',
-    title: 'first',
-    description: 'first todo',
-    complete: false
-  },
-  {
-    id: '2',
-    title: 'second',
-    description: 'second todo',
-    complete: true
-  },
-  {
-    id: '3',
-    title: 'third',
-    description: 'third todo',
-    complete: true
-  }
-];
+// 아래 공통모듈은 factory, service로 만들어 사용하는 것이 좋다. 
+// 메모리 효용 등
+// 아래처럼 만들고 angular.module('mytodos', ['ionic', 'mytodos.todo-data']) 추가 
+// 나중에 쌤이 추가해주실 예정 
+// angular.module('mytodos.todo-data',[])
+// .factory('TodoData', function(){
+//   var todos = [];
+//   return {
+//     list: function() {
+
+//     },
+//     create: function() {
+
+//     }
+//   }
+// })
+
+// 로컬스토리지의 json값 불러오기. 
+var todos = angular.fromJson(window.localStorage['todos'] || '[]');
+
+// 로컬스토리지에 json형태로 저장하기 
+function saveToStorage() {
+  window.localStorage['todo'] = angular.toJson(todos);
+}
 
 // 하나의 특정 할일을 넘겨주는 함수
 function getTodo(todoId) {
@@ -34,6 +38,7 @@ function updateTodo(todo) {
   for(var i=0; i<todos.length; i++) {
     if(todos[i].id === todo.id) {
       todos[i] = todo;
+      saveToStorage();
       return;
     }
   }
@@ -41,4 +46,5 @@ function updateTodo(todo) {
 
 function createTodo(todo) {
   todos.push(todo);
+  saveToStorage();
 }
