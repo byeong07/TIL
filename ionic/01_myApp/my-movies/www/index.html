@@ -59,6 +59,7 @@
         </div>
         <!-- 아래로 스크롤 시 무한 스크롤 -->
         <!-- ng-if="moreDataCanBeLoaded" : true일때만 무한 스크롤 -->
+        <!-- distance="1%" : 아래 1% 남았을 때 -->
         <ion-infinite-scroll
           ng-if="moreDataCanBeLoaded"
           on-infinite="loadMore()"
