@@ -336,3 +336,45 @@
 #### 새로운 할일을 footer에 배치하기 
 
 #### 드래그하여 정렬 기능
+
+#### 정렬 버튼 추가 (토글)
+
+### 앱 배포하기 
+
+#### config.xml 변경 
+
+- `<name>02_to-do</name>` 스마트폰에 나오는 이름 (앱 명칭)
+- `<widget id="com.ionicframework.02todo602245"` 내 앱 id로 사용됨. 꼭 변경하기 
+- `version="0.0.1"` 버전업 배포시 수정 
+
+- 프로젝트 생성 시 설정
+ - $ ionic start -a "[APP_NAME]"
+
+- 아이콘, 스플래시 이미지 변경 (안드로이드에서는 이슈있음)
+ - icon.png 본래사이즈보다는 크게해서 저장 
+ - $ cp [아이콘이미지] resources/icon.png
+
+#### 앱 최종배포 
+- <http://ionicframework.com/docs/guide/publishing.html>
+
+- 만약 하이브리드앱이라고 승인이 안될 경우 사용하지 않더라도 네이티브기능인 카메라 등을 넣도록 한다. 
+
+### 참고 사항
+- app layout
+ - 다양한 기기에서 테스트 필요
+ - 안드로이드 버전별 webview에 따른 차이
+
+- app performance
+ - android 구형기기(4.0~4.3)에서 성능 이슈 존재
+ - 구형기기에서 crosswalk 프로젝트 이용고려 <https://crosswalk-project.org/>
+ - 애니메이션 효과 제거 
+
+- 푸쉬 구현 
+ - $ ionic plugin add phonegap-plugin-push (찾아보기)
+
+- OAuth : ngCordovaOauth
+- SNS Sharing : ngCordova socialSharing
+- 카카오톡 Sharing 
+ - Android 4.4의 chromium에서 intent 미지원 이슈
+ - 하이브리드앱의 경우 지원 안함 
+ - 필요시 쌤의 커스터마이징 소스 공유예정 
