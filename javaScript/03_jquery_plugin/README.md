@@ -52,11 +52,11 @@ $.유틸리티함수();
 jquery.유틸리티함수();
 ```
 
-- 실습 : 3자리수마다 콤마를 추가하는 유틸리티 만들기 
+#### 실습 : 3자리수마다 콤마를 추가하는 유틸리티 만들기 
 
-- slice 메서드 
- - ` arrayObj.splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]])` 
+##### slice 메서드 
+- ` arrayObj.splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]])` 
 
- - start : 필수 요소.배열에서 요소를 제거할 위치이며 0부터 시작하는 위치입니다.
- - deleteCount : 필수 요소.제거할 요소의 수입니다.
- - item1, item2,. . ., itemN : 선택 사항입니다.삭제된 요소 대신 배열에 삽입할 요소입니다.
+- start : 필수 요소.배열에서 요소를 제거할 위치이며 0부터 시작하는 위치입니다.
+- deleteCount : 필수 요소.제거할 요소의 수입니다.
+- item1, item2,. . ., itemN : 선택 사항입니다.삭제된 요소 대신 배열에 삽입할 요소입니다.
