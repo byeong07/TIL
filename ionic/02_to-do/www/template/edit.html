@@ -1,0 +1,23 @@
+<ion-view view-title="할일 입력" >
+  <!-- ng-controller="EditCtrl" 로 쓰면 하나밖에 못쓰므로 수정-->
+  <ion-content>
+    <div class="list">
+      <!-- item-input : mobile input에 적합한 style제공 -->
+      <div class="item item-input">
+        <!-- value="{{todo.title}}" 로 하면 양방향 바인딩은 안된다. -->
+        <!-- ng-model로 하였을 때 양방향 바인딩된다. -->
+        <input type="text" ng-model="todo.title">
+      </div>
+      <div class="item item-input">
+        <textarea rows="5" ng-model="todo.description"></textarea>
+      </div>
+      <ion-checkbox ng-model="todo.complete">완료</ion-checkbox>
+    </div>
+    
+    <div class="padding">
+      <!-- button-block : 버튼 꽉 차게
+      button-positive : 색상 밝게 -->
+      <button class="button button-block button-positive" ng-click="save()">저장</button>
+    </div>
+  </ion-content>
+</ion-view>

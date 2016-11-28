@@ -62,7 +62,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 			if($scope.orderMenuList[index-1].classList.contains("on")){
 				return;
 			} else {
-				for(i=0; i<$scope.orderMenuList.length; i++){
+				for(i=0, j=$scope.orderMenuList.length; i<j; i++){
 					$scope.orderMenuList[i].classList.remove("on");
 				}
 				$scope.orderMenuList[index-1].classList.add("on");
