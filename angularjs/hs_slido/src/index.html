@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-KR">
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta charset="UTF-8">
@@ -18,7 +18,7 @@
     </header>
 
     <div class="side-wrap">
-      <nav>
+      <nav class="page-nav">
         <h2 class="blind">menu</h2>
         <div class="toggle-menu">
           <button type="button" aria-label="메뉴 펼침"><span class="fa fa-bars" aria-hidden="true"></span></button>
@@ -26,15 +26,14 @@
         <div class="side-container">
           <div class="group-info" data-ng-controller="IndexController">
             <h2>{{ groupName }}</h2>
-            <p>{{ groupDate | date:'yyyy-MM-dd' }}</p>
+            <p class="date">{{ groupDate | date:'yyyy-MM-dd' }}</p>
           </div>
           <ul class="gnb-menu">
-            <li><a href="#">Live</a></li>
-            <li><a href="#">My profile</a></li>
+            <li class="on"><a href="#"><span class="fa fa-home" aria-hidden="true"></span>Live</a></li>
+            <li><a href="#"><span class="fa fa-user" aria-hidden="true"></span>My profile</a></li>
           </ul>
         </div>
       </nav>
-
       <div class="gnb-footer">
         <button type="button">Switch event</button>
         <ul class="mode">
