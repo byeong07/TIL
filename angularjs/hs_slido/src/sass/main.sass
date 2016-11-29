@@ -13,7 +13,12 @@
 body
 	background-color: $base-bg
 
-header
+.wrap
+	position: relative
+	width: 100%
+	height: 100%
+
+.page-header
 	position: fixed
 	z-index: 1000
 	top: 0
@@ -24,8 +29,32 @@ header
 	background-color: $main-color
 	box-shadow: 0 4px 8px rgba(0,0,0,.28)
 	h1
-		font-size: 
+		position: absolute
+		top: 0
+		left: 65px
+	h2
 		text-align: center
+
+.side-wrap
+	position: fixed
+	z-index: 1010
+	// width: 200px
+	height: 100%
+	.toggle-menu
+		height: $header-height
+		line-height: $header-height
+		button
+			padding: 0 24px
+			vertical-align: middle
+		.fa-bars
+			font-size: 24px
+			color: #fff
+	.group-info
+		h2
+			color: #333
+			font-size: 1rem
+	.side-container
+		padding: $base-padding
 
 .main-article
 	padding-top: $header-height
