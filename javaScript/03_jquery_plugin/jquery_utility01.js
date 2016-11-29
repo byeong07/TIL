@@ -10,12 +10,17 @@
 		for(var i=dotIndex; i>0; i-=3){
 			// i번째에 제거할 요소는 0개, ","를 삽입한다.
 			arrayData.splice(i, 0, ",");
-			console.log(arrayData);
 		}
 		return arrayData.join("");
 	}
 })(jQuery);
 
 $(document).ready(function(){
-	document.write("1231231234=>" + $.addComma("1231231234"));
+	$(".btn-num").on("click", function(){
+		var $inputNum = $("#inputNum").val();
+		$resultNum = $.addComma($inputNum);
+		
+		// document.getElementById("resultNum").setAttribute('value', $resultNum);
+		$("#resultNum").val($resultNum);
+	});
 });
