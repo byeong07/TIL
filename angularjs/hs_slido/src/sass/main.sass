@@ -55,15 +55,15 @@ body
 
 	.page-nav
 		position: relative
-		left: -200px
+		left: 0px
 		height: 100vh - $header-height
 		@media (min-width: #{$mq-menu})
 			transition: .3s ease-in-out
-			transform: translateX(200px)
+			transform: translateX(0px)
 			opacity: 1
 		@media (max-width: #{$mq-menu})
 			transition: .3s ease-in-out
-			transform: translateX(0px)
+			transform: translateX(-200px)
 			opacity: 0
 
 	.side-container
