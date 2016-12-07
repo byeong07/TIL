@@ -34,5 +34,5 @@
 - [x] 질문 내용을 클릭하면 상세페이지로 이동하여 comment(덧글)를 달 수 있는 기능 (AngularJS - route)
 
 #### Sass to CSS 
-- [x] 좌측 슬라이드 메뉴로 들어가고 나오게하기 (Media Query, CSS3 Animation)
+- [x] 햄버거 버튼 클릭시 좌측 슬라이드 메뉴 들어가고 나오게하기 (CSS3 Animation, JavaScript, jQuery)
 - [ ] 모바일 대응 시 좌측 슬라이드 메뉴 style 바꾸기 
