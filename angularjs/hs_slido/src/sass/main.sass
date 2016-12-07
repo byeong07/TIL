@@ -36,92 +36,92 @@ body
 	h2
 		text-align: center
 
-.side-wrap
+.toggle-menu
 	position: fixed
 	z-index: 1010
 	width: 200px
-	height: 100%
+	height: $header-height
+	line-height: $header-height
+	button
+		padding: 0 24px
+		vertical-align: middle
+	.fa-bars
+		font-size: 24px
+		color: #fff
+
+.page-nav
+	position: fixed
+	left: 0px
+	margin-top: $header-height
+	width: 200px
+	height: 100vh - $header-height
 	ul 
 		padding-left: 0
-	.toggle-menu
-		height: $header-height
-		line-height: $header-height
-		button
-			padding: 0 24px
-			vertical-align: middle
-		.fa-bars
-			font-size: 24px
-			color: #fff
+	@media (min-width: #{$mq-menu})
+		transition: .3s ease-in-out
+		transform: translateX(0px)
+		opacity: 1
+	@media (max-width: #{$mq-menu})
+		transition: .3s ease-in-out
+		transform: translateX(-200px)
+		opacity: 0
 
-	.page-nav
-		position: relative
-		left: 0px
-		height: 100vh - $header-height
-		@media (min-width: #{$mq-menu})
-			transition: .3s ease-in-out
-			transform: translateX(0px)
-			opacity: 1
-		@media (max-width: #{$mq-menu})
-			transition: .3s ease-in-out
-			transform: translateX(-200px)
-			opacity: 0
-
-	.side-container
-		padding: $base-padding
-	.group-info
-		padding-left: $base-padding
-		border-bottom: 1px solid $base-line
-		h2
-			color: #333
-			font-size: 1rem
-		.date
-			margin-top: 0
-			font-size: $small-font
-	.gnb-scroll
-		overflow-y: auto
-		// 스크롤부분 추후 수정
-		height: 100vh - 6*$header-height
-	.gnb-menu
-		a 
-			display: inline-block
-			padding: 10px 15px
-			width: 100%
-		.on
-			font-weight: bold
-			color: $sky-color
-			background-color: $base-line
-		.fa
-			margin-right: 15px
-	.gnb-footer
-		position: absolute
-		bottom: 0
-		width: 100%
-		padding: $base-padding
-		padding-bottom: 0
+.side-container
+	padding: $base-padding
+.group-info
+	padding-left: $base-padding
+	border-bottom: 1px solid $base-line
+	h2
+		color: #333
+		font-size: 1rem
+	.date
+		margin-top: 0
 		font-size: $small-font
-		background: $base-bg
-		button
-			display: block
-			width: 100%
-			padding: 5px
-			color: inherit
-			border: 1px solid $base-line
-			border-radius: $thin-border-radius
-			&:hover
-				color: #aaa
-				border: 1px solid #aaa
-		.mode
-			text-align: center
-		li
-			display: inline-block
-		li+li:before
-			display: inline-block
-			content: '|'
-			padding: 0 7px 0 5px
-			font-size: 10px
-		a
-			&:hover
-				text-decoration: underline
+.gnb-scroll
+	overflow-y: auto
+	// 스크롤부분 추후 수정
+	height: 100vh - 6*$header-height
+.gnb-menu
+	a 
+		display: inline-block
+		padding: 10px 15px
+		width: 100%
+	.on
+		font-weight: bold
+		color: $sky-color
+		background-color: $base-line
+	.fa
+		margin-right: 15px
+.gnb-footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	padding: $base-padding
+	padding-bottom: 0
+	font-size: $small-font
+	background: $base-bg
+	button
+		display: block
+		width: 100%
+		padding: 5px
+		color: inherit
+		border: 1px solid $base-line
+		border-radius: $thin-border-radius
+		&:hover
+			color: #aaa
+			border: 1px solid #aaa
+	.mode
+		text-align: center
+	li
+		display: inline-block
+	li+li:before
+		display: inline-block
+		content: '|'
+		padding: 0 7px 0 5px
+		font-size: 10px
+	a
+		&:hover
+			text-decoration: underline
 
 .main-article
 	padding-top: $header-height

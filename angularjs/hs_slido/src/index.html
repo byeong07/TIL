@@ -18,32 +18,29 @@
       <h2>Questions</h2>
     </header>
 
-    <nav class="side-wrap">
-      <h2 class="blind">menu</h2>
-        <div class="toggle-menu">
-          <button type="button" aria-label="메뉴 펼침"><span class="fa fa-bars" aria-hidden="true"></span></button>
+    <div class="toggle-menu">
+      <button type="button" aria-label="메뉴 펼침"><span class="fa fa-bars" aria-hidden="true"></span></button>
+    </div>
+    <nav class="page-nav">
+      <div class="side-container">
+        <div class="group-info" data-ng-controller="IndexController">
+          <h2>{{ groupName }}</h2>
+          <p class="date">{{ groupDate | date:'yyyy-MM-dd' }}</p>
         </div>
-      <div class="page-nav">
-        <div class="side-container">
-          <div class="group-info" data-ng-controller="IndexController">
-            <h2>{{ groupName }}</h2>
-            <p class="date">{{ groupDate | date:'yyyy-MM-dd' }}</p>
-          </div>
-          <div class="gnb-scroll">
-            <ul class="gnb-menu">
-              <li class="on"><a href="#"><span class="fa fa-home" aria-hidden="true"></span>Live</a></li>
-              <li><a href="#"><span class="fa fa-user" aria-hidden="true"></span>My profile</a></li>
-            </ul>
-          </div>
-        </div>
-      
-        <div class="gnb-footer">
-          <button type="button">Switch event</button>
-          <ul class="mode">
-            <li><a href="#">Present mode</a></li>
-            <li><a href="#">Admin mode</a></li>
+        <div class="gnb-scroll">
+          <ul class="gnb-menu">
+            <li class="on"><a href="#"><span class="fa fa-home" aria-hidden="true"></span>Live</a></li>
+            <li><a href="#"><span class="fa fa-user" aria-hidden="true"></span>My profile</a></li>
           </ul>
         </div>
+      </div>
+    
+      <div class="gnb-footer">
+        <button type="button">Switch event</button>
+        <ul class="mode">
+          <li><a href="#">Present mode</a></li>
+          <li><a href="#">Admin mode</a></li>
+        </ul>
       </div>
     </nav>
     
