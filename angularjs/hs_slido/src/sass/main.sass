@@ -45,7 +45,7 @@ body
 	height: $header-height
 	line-height: $header-height
 	button
-		padding: 0 15px
+		padding: 0 20px
 		vertical-align: middle
 	.fa-bars
 		font-size: 24px
@@ -53,10 +53,13 @@ body
 
 .page-nav
 	position: fixed
+	z-index: 1010
 	left: 0px
 	margin-top: $header-height
 	width: 200px
 	height: 100vh - $header-height
+	@media (max-width: #{$mq-menu})
+		background: $base-bg
 	ul 
 		padding-left: 0
 	@media (min-width: #{$mq-menu})
@@ -65,8 +68,6 @@ body
 		opacity: 1
 	@media (max-width: #{$mq-menu})
 		transition: .3s ease-in-out
-		transform: translateX(-200px)
-		opacity: 0
 .page-nav.sliding
 	transition: .3s ease-in-out
 	transform: translateX(-200px)
@@ -105,7 +106,7 @@ body
 	padding: $base-padding
 	padding-bottom: 0
 	font-size: $small-font
-	background: $base-bg
+	
 	button
 		display: block
 		width: 100%
