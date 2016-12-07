@@ -4,6 +4,7 @@ Today I Learned~!! 열공모드~*
 ******************************************************
 
 ## [Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/TIL/angularjs/hs_slido/src/index.html)
+### [자세한 설명보기](https://github.com/sharryhong/TIL/tree/master/angularjs/hs_slido)
 
 [![Hong's portfolio - sli.do 서비스](img/slido.jpg)](https://sharryhong.github.io/TIL/angularjs/hs_slido/src/index.html)
 
@@ -14,7 +15,7 @@ Today I Learned~!! 열공모드~*
 
 #### Front-End 개발 기술
 
-- AngularJS, JSON, JavaScript
+- AngularJS, JSON, JavaScript, jQuery
 - HTML, SASS to CSS 
 - Gulp
 
