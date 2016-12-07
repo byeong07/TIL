@@ -1,3 +1,4 @@
+// 왼쪽 slide menu 
 (function(global, $){
 	'use strict';
 
@@ -23,15 +24,7 @@
 	}
 
 	SlideMenu.prototype.toggleMenu = function() {
-		if (this.$toggleMenu.hasClass("sliding") ) {
-			this.$toggleContents.stop().animate({left:"0px"}, 200);
-			this.$toggleMenu.removeClass("sliding");
-			console.log('1');
-		} else {
-			this.$toggleContents.stop().animate({left:"-200px"}, 200);
-			this.$toggleMenu.addClass("sliding");
-			console.log('2');
-		}
+		this.$toggleContents.toggleClass("sliding");
 	}
 
 	slideMenu.init();
