@@ -28,10 +28,10 @@
 ## 개발 진행 상황
 
 #### AngularJS, JavaScript 
-- [x] 질문을 입력받아 popular(인기순), Recent(최신순) 대로 보여주는 기능 
-- [x] popular(인기순) : 좋아요 버튼 클릭시 자동으로 상단으로 이동하는 기능 (AngularJS - filter)
+- [x] 질문을 입력받아 `popular(인기순)`, `Recent(최신순)` 대로 보여주는 기능 
+- [x] popular(인기순) : `좋아요` 버튼 클릭시 `자동으로 상단`으로 이동하는 기능 (AngularJS - filter)
 - [x] 질문자 이름을 입력하지 않을 시 `Anonymous(익명)`로 표시되는 기능 
-- [x] 질문 내용을 클릭하면 상세페이지로 이동하여 comment(덧글)를 달 수 있는 기능 (AngularJS - route)
+- [x] 질문 내용을 클릭하면 상세페이지로 이동하여 `comment(덧글)`를 달 수 있는 기능 (AngularJS - route)
 
 #### Sass to CSS 
 - [x] 햄버거 버튼 클릭시 좌측 슬라이드 메뉴 들어가고 나오게하기 (CSS3 Animation, JavaScript, jQuery)
