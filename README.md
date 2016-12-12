@@ -3,7 +3,7 @@
 Today I Learned~!! 열공모드~*
 ******************************************************
 
-## [Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/TIL/angularjs/hs_slido/src/index.html)
+## [Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/hs_slido/src)
 ### [자세한 설명보기](https://github.com/sharryhong/TIL/tree/master/angularjs/hs_slido)
 
 [![Hong's portfolio - sli.do 서비스](img/slido.jpg)](https://sharryhong.github.io/hs_slido/src)
