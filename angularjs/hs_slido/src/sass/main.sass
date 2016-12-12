@@ -54,7 +54,7 @@ body
 .page-nav
 	position: fixed
 	z-index: 1010
-	left: 0px
+	left: -200px
 	margin-top: $header-height
 	width: 200px
 	height: 100vh - $header-height
@@ -64,14 +64,16 @@ body
 		padding-left: 0
 	@media (min-width: #{$mq-menu})
 		transition: .3s ease-in-out
-		transform: translateX(0px)
+		
 		opacity: 1
 	@media (max-width: #{$mq-menu})
 		transition: .3s ease-in-out
+		transform: translateX(-200px)
+		opacity: 0
 .page-nav.sliding
 	transition: .3s ease-in-out
-	transform: translateX(-200px)
-	opacity: 0
+	transform: translateX(200px)
+	opacity: 1
 
 .side-container
 	padding: $base-padding

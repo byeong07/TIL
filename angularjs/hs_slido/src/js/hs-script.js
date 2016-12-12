@@ -10,7 +10,7 @@
 		this.$toggleBtn = null;
 		this.$toggleContents = null;
 		// 브라우저 크기 관련 프로퍼티 
-		this.$deskWidth = true; // 한번만 실행하기 위한 변수 
+		this.$deskWidth = false; // 한번만 실행하기 위한 변수 
 		this.$deskWidthPx = 1240; // 슬라이드 메뉴 들어가는 시점 
 	}
 
@@ -28,6 +28,11 @@
 		this.$toggleBtn.on('click', function(){
 				objThis.toggleMenu();
 		});
+		if(window.innerWidth > objThis.$deskWidthPx && objThis.$deskWidth == false){
+			console.log(objThis.$deskWidthPx+'px 값보다 작아요~');
+			objThis.toggleMenu();
+			objThis.$deskWidth = true;
+		}
 		// 브라우저 창 크기 바뀔 때 
 		$(window).resize(function(){
 			// 데스크탑이 아니면 (or 창이 줄어들면)
@@ -35,6 +40,7 @@
 				console.log(objThis.$deskWidthPx+'px 값보다 작아지면!');
 				objThis.toggleMenu();
 				objThis.$deskWidth = false;
+			// 데스크탑이라면
 			} else if(window.innerWidth > objThis.$deskWidthPx && objThis.$deskWidth == false){
 				console.log(objThis.$deskWidthPx+'px 값보다 커지면!');
 				objThis.toggleMenu();
