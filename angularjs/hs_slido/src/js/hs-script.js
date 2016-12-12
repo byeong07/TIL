@@ -32,9 +32,11 @@
 		$(window).resize(function(){
 			// 데스크탑이 아니면 (or 창이 줄어들면)
 			if(window.innerWidth < objThis.$deskWidthPx && objThis.$deskWidth == true){
+				console.log(objThis.$deskWidthPx+'px 값보다 작아지면!');
 				objThis.toggleMenu();
 				objThis.$deskWidth = false;
 			} else if(window.innerWidth > objThis.$deskWidthPx && objThis.$deskWidth == false){
+				console.log(objThis.$deskWidthPx+'px 값보다 커지면!');
 				objThis.toggleMenu();
 				objThis.$deskWidth = true;
 			}
