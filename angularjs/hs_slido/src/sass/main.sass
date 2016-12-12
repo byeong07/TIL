@@ -41,7 +41,7 @@ body
 .toggle-menu
 	position: fixed
 	z-index: 1010
-	width: 200px
+	width: $slidemenu-width
 	height: $header-height
 	line-height: $header-height
 	button
@@ -54,9 +54,9 @@ body
 .page-nav
 	position: fixed
 	z-index: 1010
-	left: -200px
+	left: -$slidemenu-width
 	margin-top: $header-height
-	width: 200px
+	width: $slidemenu-width
 	height: 100vh - $header-height
 	@media (max-width: #{$mq-menu})
 		background: $base-bg
@@ -64,14 +64,14 @@ body
 		padding-left: 0
 	@media (min-width: #{$mq-menu})
 		transition: .3s ease-in-out
-		opacity: 1
+		// opacity: 1
 	@media (max-width: #{$mq-menu})
 		transition: .3s ease-in-out
-		transform: translateX(-200px)
+		transform: translateX(-$slidemenu-width)
 		opacity: 0
 .page-nav.sliding
 	transition: .3s ease-in-out
-	transform: translateX(200px)
+	transform: translateX($slidemenu-width)
 	opacity: 1
 
 .side-container
@@ -87,7 +87,6 @@ body
 		font-size: $small-font
 .gnb-scroll
 	overflow-y: auto
-	// 스크롤부분 추후 수정
 	height: 100vh - 6*$header-height
 .gnb-menu
 	a 
@@ -202,7 +201,6 @@ body
 		&:last-child
 			background: $light-gray-color
 			input, textarea
-				// resize: none
 				width: 100%
 				font-size: 0.75rem
 	button
