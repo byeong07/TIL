@@ -1,5 +1,5 @@
 # AngularJS Project
-## [Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/TIL/angularjs/hs_slido/src/index.html)
+## [Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/hs_slido/src)
 
 ### 프로젝트 주제 
 
