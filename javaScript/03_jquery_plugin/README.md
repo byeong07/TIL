@@ -43,7 +43,7 @@ $("#tabMenu").setSelectMenu(1);
 	$.유틸리티 = function() {
 			// 기능구현
 	}
-}).(jQuery);
+})(jQuery);
 ```
 
 - 유틸리티 사용
