@@ -9,6 +9,8 @@
 		this.$toggleMenu = null;
 		this.$toggleBtn = null;
 		this.$toggleContents = null;
+		this.$menuCover = null;
+		this.$mainCover = null;
 		// 브라우저 크기 관련 프로퍼티 
 		this.$deskWidth = false; // 한번만 실행하기 위한 변수 
 		this.$deskWidthPx = 1240; // 슬라이드 메뉴 들어가는 시점 
@@ -20,16 +22,26 @@
 		this.$toggleBtn = this.$toggleMenu.find('button');
 		// 메뉴 
 		this.$toggleContents = $('.page-nav');
+		// 검정 cover
+		this.$menuCover = $('.wrap').prepend("<div class='main-cover'></div>");
+		this.$mainCover = $('.main-cover');
 	}
 
 	SlideMenu.prototype.initEvent = function() {
 		var objThis = this;
 		// 햄버거 버튼 클릭시 toggleMenu메소드 실행 
 		this.$toggleBtn.on('click', function(){
-				objThis.toggleMenu();
+			objThis.toggleMenu();
+			if(window.innerWidth < objThis.$deskWidthPx){
+				objThis.$mainCover.toggleClass('menu-cover');
+			}
+		});
+		// cover클릭시 메뉴 닫히고 cover 없애기 
+		this.$mainCover.on('click', function(){
+			objThis.toggleMenu();
+			objThis.$mainCover.removeClass('menu-cover');
 		});
 		if(window.innerWidth > objThis.$deskWidthPx && objThis.$deskWidth == false){
-			console.log(objThis.$deskWidthPx+'px 값보다 작아요~');
 			objThis.toggleMenu();
 			objThis.$deskWidth = true;
 		}
@@ -39,18 +51,20 @@
 			if(window.innerWidth < objThis.$deskWidthPx && objThis.$deskWidth == true){
 				console.log(objThis.$deskWidthPx+'px 값보다 작아지면!');
 				objThis.toggleMenu();
+				objThis.$mainCover.removeClass('menu-cover');
 				objThis.$deskWidth = false;
 			// 데스크탑이라면
 			} else if(window.innerWidth > objThis.$deskWidthPx && objThis.$deskWidth == false){
 				console.log(objThis.$deskWidthPx+'px 값보다 커지면!');
 				objThis.toggleMenu();
+				objThis.$mainCover.removeClass('menu-cover');
 				objThis.$deskWidth = true;
 			}
 		});
 	}
 	// class 이름 붙이고 떼는 기능
 	SlideMenu.prototype.toggleMenu = function() {
-		this.$toggleContents.toggleClass("sliding");
+		this.$toggleContents.toggleClass('sliding');
 	}
 
 	slideMenu.init();
