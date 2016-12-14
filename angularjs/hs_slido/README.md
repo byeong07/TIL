@@ -1,5 +1,5 @@
 # AngularJS Project
-## [Hong's portfolio - sli.do 서비스 개발중](https://sharryhong.github.io/hs_slido/src)
+## [Hong's portfolio - sli.do 서비스](https://sharryhong.github.io/hs_slido/src)
 
 ### 프로젝트 주제 
 
@@ -35,4 +35,4 @@
 
 #### Sass to CSS 
 - [x] 햄버거 버튼 클릭시 좌측 슬라이드 메뉴 들어가고 나오게하기 (CSS3 Animation, JavaScript, jQuery)
-- [ ] 모바일 대응 시 좌측 슬라이드 메뉴 style 바꾸기 
+- [x] 모바일 대응 시 좌측 슬라이드 메뉴 style 바꾸기 
