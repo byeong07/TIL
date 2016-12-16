@@ -32,3 +32,20 @@ $("#tabMenu").setSelectMenu(1);
 
 ### jQuery 플러그인 만들기 
 
+#### 구조 
+```
+(function($){
+	$.fn.플러그인이름 = function(속성값){		// $ = jQuery, fn = prototype
+		this.each(function(index){
+			// 기능 
+		})
+		return this;
+	}
+})(jQuery)
+```
+
+- 위의 구조를 보면 prototype방식 jQuery class의 메소드 인 것을 알 수 있습니다. 
+- jquery의 each는 매개변수로 들어오는 함수를 반복해서 호출해줍니다. 
+- return this를 해준 이유는 만든 플러그인과 다른 메서드를 체인구조로 호출할 수 있게 하기 위해서입니다.  
+ - $(선택자).만든플러그인().다른jquery메서드();
+ - $(선택자).만든플러그인() 결과 값이 return this.. this는 jquery 인스턴스이기 때문에 메서드를 호출할 수 있습니다.
