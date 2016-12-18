@@ -1,10 +1,3 @@
-// require('angular');
-// require('angular-route');
-// require('angular-animate');
-// require('./controllers/HomeController');
-// require('./controllers/SuggestionController');
-// require('./services/suggestion');
-
 var app = angular.module('SuggestionBox', ['ngRoute']);
 
 app.config(function($routeProvider){
